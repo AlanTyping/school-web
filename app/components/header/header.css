@@ -1,0 +1,7 @@
+header {
+    transition: margin 0.3s ease-in-out;
+}
+
+.header-hidden {
+    margin-top: -80px;
+}
