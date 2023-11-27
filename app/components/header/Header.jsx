@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import Nav from '../nav/Nav';
+import Nav from './nav/Nav';
 import { useState, useEffect } from 'react';
 import './header.css';
 
@@ -28,7 +28,7 @@ const Header = () => {
   }, [lastScrollPosition]);
 
   return (
-    <header className={`${hidden && 'header-hidden'} h-[80px] bg-blue-400 flex justify-center xl:h-[80px] top-0 fixed w-full`}>
+    <header className={`${hidden && 'header-hidden'} h-[80px] bg-blue-400 flex justify-center xl:h-[80px] top-0 fixed w-full z-[1]`}>
       <Nav />
     </header>
   )

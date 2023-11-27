@@ -11,8 +11,8 @@ const Section = () => {
         width={'100%'}
         height={'auto'}
         alt="Picture of the author" />
-        <div className='h-[50px] w-[50px] bg-blue-400'>
-
+        <div className='p-6 w-[full] text-[1.7rem]'>
+            <h1>Manolo school</h1>
         </div>
     </div>
   )
