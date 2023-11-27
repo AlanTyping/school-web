@@ -22,7 +22,7 @@ const HeaderChange = () => {
     return (
         <>
             { windowWidth > 768 ? <Header /> : <MobileHeader /> }
-        </>
+        </> 
     )
 }
 

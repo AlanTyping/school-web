@@ -19,7 +19,7 @@ const Header = () => {
       }
       setLastScrollPosition(currentScrollPosition);
     };
- 
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {
@@ -28,9 +28,9 @@ const Header = () => {
   }, [lastScrollPosition]);
 
   return (
-      <header className={`${hidden && 'header-hidden'} h-[80px] bg-blue-400 flex justify-center xl:h-[80px] top-0 fixed w-full`}>
-        <Nav />
-      </header>
+    <header className={`${hidden && 'header-hidden'} h-[80px] bg-blue-400 flex justify-center xl:h-[80px] top-0 fixed w-full`}>
+      <Nav />
+    </header>
   )
 }
 
