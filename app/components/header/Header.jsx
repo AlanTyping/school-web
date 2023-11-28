@@ -7,7 +7,7 @@ import './header.css';
 
 const Header = () => {
   const [hidden, setHidden] = useState(false);
-  const [lastScrollPosition, setLastScrollPosition] = useState(0);
+  const [lastScrollPosition, setLastScrollPosition] = useState();
 
   useEffect(() => {
     const handleScroll = () => {
