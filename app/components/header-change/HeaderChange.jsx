@@ -5,9 +5,11 @@ import MobileHeader from '../mobile-header/MobileHeader';
 import Header from '../header/Header';
 
 const HeaderChange = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState();
 
     useEffect(() => {
+        setWindowWidth(window.innerWidth);
+
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         };
