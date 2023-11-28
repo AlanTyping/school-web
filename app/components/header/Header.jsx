@@ -9,26 +9,26 @@ const Header = () => {
   const [hidden, setHidden] = useState(false);
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollPosition = window.scrollY;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.scrollY;
 
-  //     if (currentScrollPosition > lastScrollPosition) {
-  //       setHidden(true);
-  //     } else {
-  //       setHidden(false);
-  //     }
-  //     setLastScrollPosition(currentScrollPosition);
-  //   }
+      if (currentScrollPosition > lastScrollPosition) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      setLastScrollPosition(currentScrollPosition);
+    }
 
-  //   if (typeof window !== 'undefined') {
-  //     window.addEventListener('scroll', handleScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
 
-  //     return () => {
-  //       window.removeEventListener('scroll', handleScroll);
-  //     };
-  //   }
-  // }, [lastScrollPosition]);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, [lastScrollPosition]);
 
   return (
     <div className='w-full h-[60px] md:h-[80px] bg-blue-400'>
