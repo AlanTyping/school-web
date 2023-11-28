@@ -26,39 +26,20 @@ const li = [
 
 const SectionsNav = () => {
   const [active, setActive] = useState();
-
-  const [windowWidth, setWindowWidth] = useState(123);
+  const [windowWidth, setWindowWidth] = useState();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setWindowWidth(window?.innerWidth);
-
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
-
       setActive(window.location.hash)
-
-      window.addEventListener('resize', handleResize);
-
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
     }
-
   }, []);
 
 
   return (
     <BrowserRouter>
-      <nav className={windowWidth > 768 ?
-        'fixed left-6 h-[200px] w-[60px] top-[50%] rounded bg-orange-400 z-[2]' :
-        'fixed h-[60px] w-[200px] bottom-[5%] rounded bg-orange-400 z-[2]'}>
+      <nav className='h-[60px] w-[200px] bottom-[5%] rounded bg-orange-400 z-[2] fixed md:left-6 md:h-[200px] md:w-[60px] md:top-[50%]'>
 
-        <ul className={windowWidth > 768 ?
-          'flex flex-col justify-center text-white h-full w-full rounded-l-lg'
-          :
-          'flex flex-row justify-center text-white h-full w-full rounded-l-lg'}>
+        <ul className='flex flex-row md:flex-col justify-center text-white h-full w-full rounded-l-lg'>
           {li.map((e) => <Li name={e.name} hash={e.hash} active={active} setActive={setActive} key={e.hash} />)}
         </ul>
       </nav>

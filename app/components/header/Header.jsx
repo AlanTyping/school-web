@@ -12,13 +12,14 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
-      if (currentScrollPosition > lastScrollPosition) {
-        setHidden(true);
-      } else {
-        setHidden(false);
+
+        if (currentScrollPosition > lastScrollPosition) {
+          setHidden(true);
+        } else {
+          setHidden(false);
+        }
+        setLastScrollPosition(currentScrollPosition);
       }
-      setLastScrollPosition(currentScrollPosition);
-    };
 
     window.addEventListener('scroll', handleScroll);
 
@@ -28,9 +29,11 @@ const Header = () => {
   }, [lastScrollPosition]);
 
   return (
-    <header className={`${hidden && 'header-hidden'} h-[80px] bg-blue-400 flex justify-center xl:h-[80px] top-0 fixed w-full z-[1]`}>
-      <Nav />
-    </header>
+    <div className='w-full h-[60px] md:h-[80px] bg-blue-400'>
+      <header className={`${hidden && 'header-hidden'} h-[60px] md:h-[80px] bg-blue-400 flex justify-center top-0 fixed w-full z-[1]`}>
+        <Nav />
+      </header>
+    </div>
   )
 }
 
