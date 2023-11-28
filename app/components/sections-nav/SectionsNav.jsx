@@ -25,22 +25,27 @@ const li = [
 ]
 
 const SectionsNav = () => {
-  const [active, setActive] = useState(typeof window !== 'undefined' ? window.location.hash : null);
+  const [active, setActive] = useState();
 
-  const [windowWidth, setWindowWidth] = useState();
+  const [windowWidth, setWindowWidth] = useState(123);
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window?.innerWidth);
 
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
 
-    window.addEventListener('resize', handleResize);
+      setActive(window.location.hash)
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+
   }, []);
 
 
