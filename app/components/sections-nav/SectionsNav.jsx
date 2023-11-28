@@ -25,20 +25,19 @@ const li = [
 ]
 
 const SectionsNav = () => {
-  const [active, setActive] = useState();
-  const [windowWidth, setWindowWidth] = useState();
+  const [active, setActive] = useState('asd');
+  const [windowWidth, setWindowWidth] = useState(123);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setActive(window.location.hash)
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     setActive(window.location.hash)
+  //   }
+  // }, []);
 
 
   return (
     <BrowserRouter>
       <nav className='h-[60px] w-[200px] bottom-[5%] rounded bg-orange-400 z-[2] fixed md:left-6 md:h-[200px] md:w-[60px] md:top-[50%]'>
-
         <ul className='flex flex-row md:flex-col justify-center text-white h-full w-full rounded-l-lg'>
           {li.map((e) => <Li name={e.name} hash={e.hash} active={active} setActive={setActive} key={e.hash} />)}
         </ul>

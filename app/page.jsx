@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
       <Header />
-      <SectionsNav />
+      {/* <SectionsNav />  */}
       <Section />
       <SectionTwo />
       <SectionThree />
