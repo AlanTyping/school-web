@@ -5,8 +5,11 @@ import logo from './d.png'
 
 const Inscription = () => {
   return (
-    <div className='flex flex-col items-center justify-center w-full'>
-        <Image className='mr-[160px] md:mr-[300px] h-[150px] w-[550px]' src={logo} />
+    <div className='flex flex-col items-center justify-center w-full relative'>
+      <div className='w-full md:w-[50%] flex items-start'>
+        <Image className='ml-4 h-[150px] w-[250px]' src={logo} />
+      </div>
+        
         
 
       <iframe
