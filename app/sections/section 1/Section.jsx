@@ -6,7 +6,7 @@ const Section = () => {
   return (
     <div className='h-[720px] w-full flex items-center justify-center relative'>
       <Image
-        className='brightness-50 absolute top-0 z-[-1]'
+        className='brightness-[0.8] absolute top-0 z-[-1]'
         src={school}
         width={'100%'}
         height={'auto'}
