@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/header/Header';
 import Image from 'next/image';
-import logo from './d.png';
+import logo from './school-logo.png';
 import Footer from '../components/footer/Footer';
 
 const Inscription = () => {
