@@ -35,9 +35,9 @@ const Header = () => {
 
   return (
     <div className='w-full h-[60px] md:h-auto bg-[#001d3d]'>
-      <header className={`${hidden && 'header-hidden'} h-[60px] md:h-[80px] 2xl:h-[110px] 2xl:text-[1.6rem] bg-[#001d3d] text-white flex justify-start top-0 fixed w-full z-[1]`}>
+      <header className={`${hidden && 'header-hidden'} h-[65px] md:h-[80px] 2xl:h-[110px] 2xl:text-[1.6rem] bg-[#001d3d] text-white flex justify-start top-0 fixed w-full z-[1]`}>
         <Link className='h-full flex items-center ml-10' href='/'>
-          <Image src={logo} alt='school logo' className='h-[75%] w-[150px] min-h-[2px]' />
+          <Image src={logo} alt='school logo' className='h-[75%] w-[120px] md:w-[150px] min-h-[2px]' />
         </Link>
         <Nav />
       </header>
