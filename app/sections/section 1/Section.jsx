@@ -4,13 +4,13 @@ import school from './assets/school.jpg'
 
 const Section = () => {
   return (
-    <div className='h-[720px] w-full flex items-center justify-center relative'>
+    <div className='h-[auto] w-full flex items-center justify-center relative text-white'>
       <Image
-        className='brightness-[0.8] absolute top-0 z-[-1] w-full'
+        className='brightness-[0.4] z-[-1] w-full'
         src={school}
         alt="Picture of the author" />
 
-        <div className='p-6 w-[full] text-[1.7rem]'>
+        <div className='p-6 w-[full] text-[1.7rem] absolute top-0'>
             <h1>Manolo school</h1>
         </div>
     </div>
