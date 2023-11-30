@@ -5,3 +5,13 @@ header {
 .header-hidden {
     margin-top: -80px;
 }
+
+.progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 5px;
+    background: #ffa500;
+    transform-origin: 0%;
+}
