@@ -7,22 +7,24 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import logo from './school-logo.png'
 import './dynamicHeader.css';
+import { scrollStorage } from '@/zustand/scrollStorage';
 
 const DynamicHeader = () => {
   const [hidden, setHidden] = useState(true);
-  const [lastScrollPosition, setLastScrollPosition] = useState();
+  const { scroll, changeScroll } = scrollStorage();
 
   useEffect(() => {
+
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
-        if (currentScrollPosition < lastScrollPosition) {
+        if (currentScrollPosition < scroll) {
           setHidden(true);
         } else {
           if (currentScrollPosition > 400) {
             setHidden(false);
           }
         }
-        setLastScrollPosition(currentScrollPosition);
+        changeScroll(currentScrollPosition);
       }
 
     if (typeof window !== 'undefined') {
@@ -34,10 +36,9 @@ const DynamicHeader = () => {
       };
     }
 
-  }, [lastScrollPosition]);
+  }, [scroll]);
 
   const { scrollYProgress } = useScroll();
-  console.log(lastScrollPosition)
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
 
   return (
