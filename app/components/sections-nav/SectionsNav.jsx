@@ -35,8 +35,6 @@ const SectionsNav = () => {
     }
   }, []);
 
-  console.log(window.location.hash)
-
   return (
     <motion.nav /* initial={{ scale: 0, x: -50 }} animate={{ scale: 1, x: 0 }}*/
       className='h-[60px] w-[200px] bottom-[5%] rounded border-x-[2px] border-[#ffa500] bg-[#001d3d7e] z-[2] fixed md:left-6 md:h-[200px] md:w-[60px] md:top-[35%]'>

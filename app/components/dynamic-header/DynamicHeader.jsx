@@ -37,7 +37,7 @@ const DynamicHeader = () => {
   }, [lastScrollPosition]);
 
   const { scrollYProgress } = useScroll();
-
+  console.log(lastScrollPosition)
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
 
   return (
