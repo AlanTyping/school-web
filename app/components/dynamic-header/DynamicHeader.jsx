@@ -46,7 +46,6 @@ const DynamicHeader = () => {
         <Image src={logo} alt='school logo' className='h-[75%] w-[110px] md:w-[140px] min-h-[2px]' />
       </Link>
       <Nav />
-      <motion.div className='progress-bar' style={{ scaleY: scrollYProgress }} />
     </motion.header>
   )
 }

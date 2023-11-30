@@ -10,8 +10,8 @@ const Section = () => {
         src={school}
         alt="Picture of the author" />
 
-        <div className='p-6 w-[full] text-[1.7rem] absolute top-0'>
-            <h1>Manolo school</h1>
+        <div className='p-6 w-[full] text-[1.7rem] absolute'>
+            <h1>School basics</h1>
         </div>
     </div>
   )
