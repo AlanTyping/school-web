@@ -5,29 +5,29 @@ import info from './svg/info.svg';
 import student from './svg/student.svg';
 
 const li = [
-    {
-      name: 'info',
-      hash: '#section-one',
-      img: payment
-    },
-    {
-      name: 'inscripción',
-      hash: '/inscripción',
-      img: info
-    },
-    {
-      name: 'pagos',
-      hash: '/pagos',
-      img: student
-    }
-  ]
+  {
+    name: 'unirse',
+    hash: '/inscripcion',
+    img: student
+  },
+  {
+    name: 'info',
+    hash: '#section-one',
+    img: info
+  },
+  {
+    name: 'pagos',
+    hash: '/pagos',
+    img: payment
+  }
+]
 
 export const GuideNav = () => {
   return (
-    <nav className='absolute bottom-[10vh]'>
-        <ul className="flex flex-row justify-evenly items-center">
-            { li.map((e, i) => <Li key={i} name={e.name} hash={e.hash} img={e.img} />) }
-        </ul>
+    <nav>
+      <ul className="flex flex-row justify-evenly items-center">
+        {li.map((e, i) => <Li key={i} name={e.name} hash={e.hash} img={e.img} />)}
+      </ul>
     </nav>
   )
 }
