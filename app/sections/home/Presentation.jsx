@@ -37,7 +37,7 @@ const Presentation = () => {
     <div className='w-[100vw] flex items-center justify-center relative text-white'>
         <Carousel autoSlide={true} >
           {[...slides.map((s, i) => (
-            <Image key={i} src={s} alt='' className='brightness-[0.4] z-[-1] w-[150vw] sm:w-[100vw] ' />
+            <Image key={i} src={s} alt='' className='brightness-[0.4] z-[-1] w-[150vw] sm:w-[100vw]' />
           ))]}
         </Carousel>
     </div>
