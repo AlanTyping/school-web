@@ -65,7 +65,7 @@ const SectionsNav = () => {
       }
     }
 
-    if (width < 1400) {
+    if (width < 1400) { 
       if (scroll < 600) {
         setActive(0)
       } else if (scroll < 1300) {
@@ -94,6 +94,7 @@ const SectionsNav = () => {
       initial="hidden"
       animate="visible"
       variants={container}
+
       className={` h-[60px] w-[200px] bottom-[5%] rounded border-x-[2px] border-[#ffa500] bg-[#001d3d7e] z-[2] fixed md:left-6 md:h-[200px] md:w-[55px] md:top-[35%]`}>
       <ul className='flex flex-row md:flex-col justify-center text-white h-full w-full rounded-l-lg'>
         {li.map((e, i) => <Li name={e.name} hash={e.hash} active={active} key={e.hash} index={i} />)}
