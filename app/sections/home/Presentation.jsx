@@ -5,7 +5,7 @@ import Image from 'next/image';
 import school from './assets/fiumba.svg';
 import { Carousel } from './carousel/Carousel';
 import { GuideNav } from '@/app/components/guide-nav/GuideNav';
-import arrow from './assets/arrow.svg';
+import arrow from './assets/blue-arrow.svg';
 
 
 const Presentation = () => {
@@ -17,7 +17,7 @@ const Presentation = () => {
   ]
 
   return (
-    <div className='w-[100%] h-[400px] md:h-[720px] flex items-center justify-center bg-gray-400 relative text-white'>
+    <div className='w-[100%] h-[400px] md:h-[700px] flex items-center justify-center bg-[#dbdada] relative text-white'>
       <Carousel autoSlide={true} >
         {[...slides.map((s, i) => (
           <div key={i} className='flex flex-col items-center justify-center text-[#001d3d]'>
@@ -29,11 +29,11 @@ const Presentation = () => {
         ))]}
       </Carousel>
 
-      <div className='hidden h-[200px] w-full md:flex flex-col absolute bottom-0 items-center '>
+      <div className='hidden w-full md:flex flex-col absolute bottom-[40px]  items-center '>
         <GuideNav />
       </div>
 
-      <Link href={`#section-one`} className='hidden md:flex absolute bottom-[3vh]'>
+      <Link href={`#section-one`} className='hidden md:flex absolute bottom-[10px] '>
         <Image src={arrow} alt='arrow' height={40} width={40} />
       </Link>
     </div>

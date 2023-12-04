@@ -79,9 +79,6 @@ const SectionsNav = () => {
         setActive(4)
       }
     }
-
-    console.log(scroll)
-
   }, [scroll]);
 
   const container = {
