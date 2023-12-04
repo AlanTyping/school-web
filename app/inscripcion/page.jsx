@@ -16,7 +16,7 @@ const Inscription = () => {
 
 
       <iframe
-        className='w-[100%] md:w-[50%]'
+        className='w-[100%] md:w-[50%] mb-[200px]'
         src="https://docs.google.com/forms/d/e/1FAIpQLSdlbhhC6SVIJgc0RjAiGT2jmsQIum0OBz_vI-NP23u9pLIaRA/viewform?embedded=true"
         height="900"
       >
