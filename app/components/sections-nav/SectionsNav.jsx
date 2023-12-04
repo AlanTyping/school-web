@@ -7,6 +7,7 @@ import { scrollStorage } from '@/zustand/scrollStorage';
 // import { useRouter } from 'next/navigation';
 import Li from './Li';
 
+
 const li = [
   {
     name: '1',
@@ -79,6 +80,8 @@ const SectionsNav = () => {
       }
     }
 
+    console.log(scroll)
+
   }, [scroll]);
 
   const container = {
@@ -92,7 +95,8 @@ const SectionsNav = () => {
   return (
     <motion.nav
       initial="hidden"
-      animate="visible"
+      animate={scroll > 600 ? "visible" : "hidden"}
+      exit={{ opacity: 0 }}
       variants={container}
 
       className={` h-[60px] w-[200px] bottom-[5%] rounded border-x-[2px] border-[#ffa500] bg-[#001d3d7e] z-[2] fixed md:left-6 md:h-[200px] md:w-[55px] md:top-[35%]`}>
