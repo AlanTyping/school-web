@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const Carousel = ({ children: slides, autoSlide = false, autoSlideInterval = 8000 }) => {
+export const Carousel = ({ children: slides, autoSlide = false, autoSlideInterval = 6000 }) => {
   const [curr, setCurr] = useState(0);
   const [transformValue, setTransformValue] = useState(`translateX(-${curr * 100}%)`);
 
