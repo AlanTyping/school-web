@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const Carousel = ({ children: slides, autoSlide = false, autoSlideInterval = 6000 }) => {
+export const Carousel = ({ children: slides, autoSlide = false, autoSlideInterval = 8000 }) => {
   const [curr, setCurr] = useState(0);
   const [transformValue, setTransformValue] = useState(`translateX(-${curr * 100}%)`);
 
@@ -29,7 +29,7 @@ export const Carousel = ({ children: slides, autoSlide = false, autoSlideInterva
   }, [curr]);
 
   return (
-    <div className='overflow-hidden relative w-[90vw] md:w-[25vw]'>
+    <div className='overflow-hidden relative w-[95vw] md:w-[25vw]'>
       
       <div className='flex transition-transform ease-out-in duration-700' style={{ transform: transformValue }}>
         {slides}

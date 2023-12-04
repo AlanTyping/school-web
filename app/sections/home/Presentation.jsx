@@ -7,17 +7,8 @@ import { Carousel } from './carousel/Carousel';
 import { GuideNav } from '@/app/components/guide-nav/GuideNav';
 import arrow from './assets/arrow.svg';
 
+
 const Presentation = () => {
-  // const [photo, setPhoto] = useState(0);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setPhoto(prevPhoto => (prevPhoto === 4 ? 0 : prevPhoto + 1));
-  //   }, 1000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
   const slides = [
     school,
     school,
@@ -31,8 +22,8 @@ const Presentation = () => {
         {[...slides.map((s, i) => (
           <div className='flex flex-col items-center justify-center text-[#001d3d]'>
 
-            <h2 className='m-4 text-[1.5rem]'>background image</h2>
-            <Image key={i} src={s} alt='' className='brightness-[0.6] z-[-1] w-[90vw] md:w-[25vw] h-[200px]' />
+            <h2 className={`m-4 text-[1.5rem]`}>imágenes de fondo</h2>
+            <Image key={i} src={s} alt='' className='brightness-[0.6] z-[-1] w-[95vw] md:w-[25vw] h-[200px]' />
 
           </div>
         ))]}
