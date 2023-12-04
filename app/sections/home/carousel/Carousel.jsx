@@ -16,7 +16,7 @@ export const Carousel = ({ children: slides, autoSlide = false, autoSlideInterva
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 640) {
-        setTransformValue(`translateX(-${curr * 150}%)`);
+        setTransformValue(`translateX(-${curr * 100}%)`);
       } else {
         setTransformValue(`translateX(-${curr * 100}%)`);
       }
@@ -29,7 +29,7 @@ export const Carousel = ({ children: slides, autoSlide = false, autoSlideInterva
   }, [curr]);
 
   return (
-    <div className='overflow-hidden relative'>
+    <div className='overflow-hidden relative w-[90vw] md:w-[25vw]'>
       
       <div className='flex transition-transform ease-out-in duration-700' style={{ transform: transformValue }}>
         {slides}

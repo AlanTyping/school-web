@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import school from './assets/school.jpg';
+import school from './assets/fiumba.svg';
 import { Carousel } from './carousel/Carousel';
 import { GuideNav } from '@/app/components/guide-nav/GuideNav';
 import arrow from './assets/arrow.svg';
@@ -26,20 +26,15 @@ const Presentation = () => {
   ]
 
   return (
-    // <div className='h-[auto] w-full flex items-center justify-center relative text-white'>
-    //   <Image
-    //     className='brightness-[0.4] z-[-1] w-full'
-    //     src={school}
-    //     alt="Picture of the author" />
-
-    //     <div className='p-6 w-[full] text-[1.7rem] absolute'>
-    //         <h1>{ photo }</h1>
-    //     </div>
-    // </div> 
-    <div className='w-[100vw] md:h-[100vh] flex items-center justify-center relative text-white'>
+    <div className='w-[100%] h-[400px] md:h-[720px] flex items-center justify-center relative text-white'>
       <Carousel autoSlide={true} >
         {[...slides.map((s, i) => (
-          <Image key={i} src={s} alt='' className='brightness-[0.6] z-[-1] w-[150vw] sm:w-[100vw]' />
+          <div className='flex flex-col items-center justify-center text-[#001d3d]'>
+
+            <h2 className='m-4 text-[1.5rem]'>background image</h2>
+            <Image key={i} src={s} alt='' className='brightness-[0.6] z-[-1] w-[90vw] md:w-[25vw] h-[200px]' />
+
+          </div>
         ))]}
       </Carousel>
 
