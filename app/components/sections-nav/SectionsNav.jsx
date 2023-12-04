@@ -69,7 +69,7 @@ const SectionsNav = () => {
     if (width < 1400) { 
       if (scroll < 600) {
         setActive(0)
-      } else if (scroll < 1300) {
+      } else if (scroll < 1200) {
         setActive(1)
       } else if (scroll < 2000) {
         setActive(2)

@@ -10,7 +10,7 @@ const Header = () => {
         <Image src={logo} alt='school logo' className='h-[65%] w-[140px] md:w-[140px] min-h-[2px]' />
       </Link>
 
-      <Nav />
+    
     </header>
   )
 }

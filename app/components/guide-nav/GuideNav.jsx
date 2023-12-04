@@ -26,7 +26,7 @@ export const GuideNav = () => {
   return (
     <nav>
       <ul className="flex flex-row justify-evenly items-center">
-        {li.map((e, i) => <Li key={i} name={e.name} hash={e.hash} img={e.img} />)}
+        {li.map((e, i) => <Li key={i} name={e.name} hash={e.hash} img={e.img} index={i} />)}
       </ul>
     </nav>
   )
