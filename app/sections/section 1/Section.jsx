@@ -17,7 +17,7 @@ const SectionOne = () => {
         <div className="h-auto flex items-center justify-center w-full flex-col lg:flex-row">
           <div className="h-[180px] flex-col p-6 lg:h-[230px] w-[380px] bg-[#3d0000] text-white rounded my-10 flex items-center justify-center">
             <h2 className="text-[1.5rem] my-[5px]">testimonio</h2>
-            <p className="my-[8px]">&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis eum excepturi quia quod laborum veniam sed ullam delectus similique voluptates&quot;</p>
+            <p className="my-[8px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis eum excepturi quia quod laborum veniam sed ullam delectus similique voluptates</p>
           </div>
 
           <p className="lg:w-[50%] lg:p-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -38,7 +38,7 @@ const SectionOne = () => {
 
           <div className="h-[180px] flex-col p-6 lg:h-[230px] w-[380px] bg-[#3d0000] text-white rounded my-10 flex items-center justify-center">
             <h2 className="text-[1.5rem] my-[5px]">testimonio</h2>
-            <p className="my-[8px]">&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis eum excepturi quia quod laborum veniam sed ullam delectus similique voluptates.&quot;</p>
+            <p className="my-[8px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis eum excepturi quia quod laborum veniam sed ullam delectus similique voluptates.</p>
           </div>
         </div>
       </div>
