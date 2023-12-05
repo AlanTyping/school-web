@@ -31,7 +31,7 @@ export const TestimoniosCarousel = ({ children: slides, autoSlide = false, autoS
   }, [curr]);
 
   return (
-    <div className='overflow-hidden relative w-[95vw] md:w-[50vw]'>
+    <div className='overflow-hidden relative w-[95vw] md:w-[40vw]'>
 
       <div className='flex transition-transform ease-out-in duration-700 text-[0.95rem]' style={{ transform: transformValue }}>
         {slides}
