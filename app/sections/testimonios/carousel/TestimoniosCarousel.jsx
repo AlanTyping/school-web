@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import arrow from './assets/arrow.svg';
 
-export const TestimoniosCarousel = ({ children: slides, autoSlide = false, autoSlideInterval = 1000 }) => {
+export const TestimoniosCarousel = ({ children: slides, autoSlide = false, autoSlideInterval = 10000 }) => {
   const [curr, setCurr] = useState(0);
   const [transformValue, setTransformValue] = useState(`translateX(-${curr * 100}%)`);
 
