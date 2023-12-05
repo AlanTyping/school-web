@@ -7,6 +7,7 @@ import Section from "./sections/section 1/Section";
 import SectionTwo from "./sections/section 2/SectionTwo";
 import SectionThree from "./sections/section 3/SectionThree";
 import SectionFour from "./sections/section 4/SectionFour";
+import { Testimonios } from "./sections/testimonios/Testimonios";
 import { Contact } from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import DynamicHeader from "./components/dynamic-header/DynamicHeader";
@@ -29,6 +30,7 @@ export default function Home() {
       <SectionTwo />
       <SectionThree />
       <SectionFour />
+      <Testimonios />
       <Contact />
       <Footer />
     </main>
