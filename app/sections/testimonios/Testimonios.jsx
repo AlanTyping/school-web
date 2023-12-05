@@ -5,7 +5,7 @@ import { Testimonio } from './testimonio/Testimonio';
 export const Testimonios = () => {
   const testimonios = [
     {
-        nombre: "Testionio 1",
+        nombre: "Testimoino 1",
         texto: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         Ducimus ut soluta accusantium voluptate quibusdam, nesciunt eum, quam ab eveniet vero magnam exercitationem,
         dolore enim aliquid veniam consectetur animi voluptas quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -13,7 +13,7 @@ export const Testimonios = () => {
         fugiat similique fugit rerum quod inventore, dicta expedita!`
     },
     {
-        nombre: "Testionio 2",
+        nombre: "Testimoino 2",
         texto: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         Ducimus ut soluta accusantium voluptate quibusdam, nesciunt eum, quam ab eveniet vero magnam exercitationem,
         dolore enim aliquid veniam consectetur animi voluptas quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -21,7 +21,7 @@ export const Testimonios = () => {
         fugiat similique fugit rerum quod inventore, dicta expedita!`
     },
     {
-        nombre: "Testionio 3",
+        nombre: "Testimoino 3",
         texto: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         Ducimus ut soluta accusantium voluptate quibusdam, nesciunt eum, quam ab eveniet vero magnam exercitationem,
         dolore enim aliquid veniam consectetur animi voluptas quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -29,7 +29,7 @@ export const Testimonios = () => {
         fugiat similique fugit rerum quod inventore, dicta expedita!`
     },
     {
-        nombre: "Testionio 4",
+        nombre: "Testimoino 4",
         texto: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         Ducimus ut soluta accusantium voluptate quibusdam, nesciunt eum, quam ab eveniet vero magnam exercitationem,
         dolore enim aliquid veniam consectetur animi voluptas quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -39,7 +39,7 @@ export const Testimonios = () => {
   ]
 
   return (
-    <section className='w-full h-[100vh] flex-center'>
+    <section className='w-full flex-center flex-col my-4'>
       <TestimoniosCarousel autoSlide={true}>
         {testimonios.map((e, i ) => <Testimonio key={i} nombre={e.nombre} texto={e.texto} />)}
       </TestimoniosCarousel>
