@@ -1,5 +1,3 @@
-import { GuideNav } from "@/app/components/guide-nav/GuideNav"
-
 const SectionOne = () => {
   return (
     <div className="h-auto w-full flex items-center justify-center">
