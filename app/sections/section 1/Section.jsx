@@ -2,7 +2,7 @@ import { GuideNav } from "@/app/components/guide-nav/GuideNav"
 
 const SectionOne = () => {
   return (
-    <div className="h-auto w-full bg-gray-300 flex items-center justify-center">
+    <div className="h-auto w-full flex items-center justify-center">
       <div id='section-one' className='h-auto w-full lg:w-[80%] text-[#001d3d] bg-white relative z-[1] px-10 lg:px-6 p-6'>
 
         <div className="h-[80px] lg:h-[140px] flex items-end justify-center w-full">
