@@ -58,13 +58,13 @@ const SectionsNav = () => {
 
   useEffect(() => {
     if (width < 600) {
-      if (scroll > 800 && scroll < 4050) {
+      if (scroll > 800 && scroll < 3880) {
         setNavActive(true);
         if (scroll < 1850) {
           setActive(1)
         } else if (scroll < 2650) {
           setActive(2)
-        } else if (scroll < 3950) {
+        } else if (scroll < 3750) {
           setActive(3)
         } else if (scroll < 4050) {
           setActive(4)
@@ -103,7 +103,7 @@ const SectionsNav = () => {
       exit={{ opacity: 0 }}
       variants={container}
 
-      className={` h-[60px] w-[200px] bottom-[5%] rounded border-x-[2px] border-[#ffa500] bg-[#001d3d7e] z-[2] fixed md:left-6 md:h-[200px] md:w-[55px] md:top-[35%]`}>
+      className={` h-[60px] w-[200px] bottom-[3%] rounded border-x-[2px] border-[#ffa500] bg-[#001d3d7e] z-[2] fixed md:left-6 md:h-[200px] md:w-[55px] md:top-[35%]`}>
       <ul className='flex flex-row md:flex-col justify-center text-white h-full w-full rounded-l-lg'>
         {li.map((e, i) => <Li image={e.image} hash={e.hash} active={active} key={e.hash} index={i} />)}
       </ul>
