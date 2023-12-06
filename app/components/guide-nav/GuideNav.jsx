@@ -1,8 +1,7 @@
-import Link from "next/link";
 import Li from "./li/Li";
-import payment from './svg/payment.svg';
 import info from './svg/info.svg';
 import student from './svg/student.svg';
+import contacto from './svg/contacto.svg';
 
 const li = [
   {
@@ -16,9 +15,9 @@ const li = [
     img: info
   },
   {
-    name: 'pagos',
-    hash: '/pagos',
-    img: payment
+    name: 'contacto',
+    hash: '#contacto',
+    img: contacto
   }
 ]
 
