@@ -23,7 +23,7 @@ const Li = ({ name, hash, active, index }) => {
       animate="visible"
       variants={variants}
       className='h-full w-full'>
-      <Link href={`${hash}`} className={`h-full w-full flex justify-center items-center ${active === (index + 1) && 'bg-[#001d3d9f]'}`}>
+      <Link href={`${hash}`} className={`h-full w-full flex justify-center items-center ${active === (index + 1) && 'bg-[#ffa600a6]'}`}>
         {name}
       </Link>
     </motion.li>
