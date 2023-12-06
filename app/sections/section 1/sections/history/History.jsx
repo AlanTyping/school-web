@@ -9,7 +9,7 @@ export const History = () => {
       </div>
 
       <div className="h-auto flex items-center justify-center w-full flex-col md:flex-row">
-        <div className="h-[180px] flex-col p-6 md:h-[230px] w-[80vw] md:w-[380px] bg-[#c78408] text-white rounded my-10 flex items-center justify-center">
+        <div className="h-[180px] flex-col p-6 md:h-[230px] w-[85vw] md:w-[380px] bg-[#c78408] text-white rounded my-10 flex items-center justify-center">
           <Image src={image} height={60} width={60} alt="" />
         </div>
 
@@ -22,7 +22,7 @@ export const History = () => {
       </div>
 
       <div className="h-auto flex items-center justify-center w-full flex-col md:flex-row">
-        <div className="h-[180px] md:order-last flex-col p-6 md:h-[230px] w-[80vw] md:w-[380px] bg-[#006de2] text-white rounded my-10 flex items-center justify-center">
+        <div className="h-[180px] md:order-last flex-col p-6 md:h-[230px] w-[85vw] md:w-[380px] bg-[#006de2] text-white rounded my-10 flex items-center justify-center">
           <Image src={image} height={60} width={60} alt="" />
         </div>
 
