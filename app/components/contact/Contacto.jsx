@@ -7,13 +7,13 @@ import map from './assets/map.svg';
 
 export const Contacto = () => {
   return (
-    <section className='bg-[#01448b] w-full flex-center flex-col text-white pb-12'>
+    <section className='bg-[#001d3d] w-full flex-center flex-col text-white pb-12'>
       <h2 className='text-[1.8rem] py-6 pt-10'>Contacto</h2>
 
       <div className='flex-center flex-col w-full sm:flex-row'>
         <div className='flex-center flex-col w-full sm:w-[50%]'>
           <div className="w-[90%] flex-center">
-            <div className='py-16 bg-[#f5f5f5] m-4 h-[400px] rounded w-full flex-center'>
+            <div className='py-16 bg-[#e6e6e6] m-4 h-[400px] rounded w-full flex-center'>
               <Image src={map} alt='' height={60} width={60} />
             </div>
           </div>
