@@ -12,7 +12,7 @@ const Identidad = () => {
           <h1 className="text-[2rem] md:text-[2.3rem]">Identidad escolar</h1>
         </div>
 
-        <div className="h-auto flex items-center flex-col justify-center w-full mt-10 px-10">
+        <div className="h-auto flex items-center flex-col justify-center w-full mt-10 md:px-10">
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Ducimus ut soluta accusantium voluptate quibusdam, nesciunt eum, quam ab eveniet vero magnam exercitationem,
             dolore enim aliquid veniam consectetur animi voluptas quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
