@@ -1,5 +1,7 @@
 import image from './assets/image3.svg';
 import Image from 'next/image';
+import { Culture } from './sections/culture/Culture';
+import { History } from './sections/history/History';
 
 const Identidad = () => {
   return (
@@ -33,37 +35,8 @@ const Identidad = () => {
           </p>
         </div>
 
-        <div className='w-full flex-center'>
-          <h2 className='text-[2rem] md:text-[2.3rem] text-[#9b6500]'>cultura</h2>
-        </div>
-
-        <div className="h-auto flex items-center justify-center w-full flex-col md:flex-row">
-          <div className="h-[180px] flex-col p-6 md:h-[230px] w-[380px] bg-[#c78408] text-white rounded my-10 flex items-center justify-center">
-            <h2 className="text-[1.5rem] my-[5px]">Evento</h2>
-            <p className="my-[8px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis eum excepturi quia quod laborum veniam sed ullam delectus similique voluptates</p>
-          </div>
-
-          <p className="md:w-[50%] md:p-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Ducimus ut soluta accusantium voluptate quibusdam, nesciunt eum, quam ab eveniet vero magnam exercitationem,
-            dolore enim aliquid veniam consectetur animi voluptas quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Placeat cum voluptate nemo eos ad repudiandae. Autem, tempore neque labore nobis voluptatem odio,
-            fugiat similique fugit rerum quod inventore, dicta expedita!
-          </p>
-        </div>
-
-        <div className="h-auto flex items-center justify-center w-full flex-col md:flex-row">
-          <p className="md:w-[50%] md:p-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Ducimus ut soluta accusantium voluptate quibusdam, nesciunt eum, quam ab eveniet vero magnam exercitationem,
-            dolore enim aliquid veniam consectetur animi voluptas quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Placeat cum voluptate nemo eos ad repudiandae. Autem, tempore neque labore nobis voluptatem odio,
-            fugiat similique fugit rerum quod inventore, dicta expedita!
-          </p>
-
-          <div className="h-[180px] flex-col p-6 md:h-[230px] w-[380px] bg-[#006de2] text-white rounded my-10 flex items-center justify-center">
-            <h2 className="text-[1.5rem] my-[5px]">Evento</h2>
-            <p className="my-[8px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis eum excepturi quia quod laborum veniam sed ullam delectus similique voluptates.</p>
-          </div>
-        </div>
+        <Culture />
+        <History />
       </div>
     </div>
 

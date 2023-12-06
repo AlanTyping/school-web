@@ -1,4 +1,3 @@
-import React from 'react'
 
 export const Testimonio = ({ nombre, texto }) => {
   return (
