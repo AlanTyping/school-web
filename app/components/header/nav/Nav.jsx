@@ -17,8 +17,8 @@ const Nav = () => {
         </motion.li>
         <motion.li whileHover={{ color: '#ffa500' }}
           className='h-full px-4'>
-          <Link href='/pagos' className='h-full flex justify-center items-center'>
-            pagos
+          <Link href='#contacto' className='h-full flex justify-center items-center'>
+            contacto
           </Link>
         </motion.li>
       </motion.ul>
