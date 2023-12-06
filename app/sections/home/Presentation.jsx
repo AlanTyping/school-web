@@ -17,7 +17,7 @@ const Presentation = () => {
   ]
 
   return (
-    <div className='w-[100%] h-[400px] md:h-[100vh] md:min-h-[550px] flex items-center bg-[#e6e6e6] justify-center relative text-white'>
+    <div className='w-[100%] h-[400px] md:h-[100vh] md:min-h-[550px] flex items-center bg-white justify-center relative text-white'>
       <Carousel autoSlide={true} >
         {[...slides.map((s, i) => (
           <div key={i} className='flex flex-col items-center justify-center text-[#001d3d]'>
