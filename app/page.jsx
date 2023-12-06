@@ -3,7 +3,7 @@
 import SectionsNav from "./components/sections-nav/SectionsNav";
 import Presentation from "./sections/home/Presentation";
 import { Guide } from "./components/guide-section/Guide";
-import Section from "./sections/section 1/Section";
+import Identidad from "./sections/section 1/Identidad";
 import SectionTwo from "./sections/section 2/SectionTwo";
 import SectionThree from "./sections/section 3/SectionThree";
 import SectionFour from "./sections/section 4/SectionFour";
@@ -26,7 +26,7 @@ export default function Home() {
 
       <Presentation />
       <Guide />
-      <Section />
+      <Identidad />
       {/* <SectionTwo />
       <SectionThree />
       <SectionFour /> */}

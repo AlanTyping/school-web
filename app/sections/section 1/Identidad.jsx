@@ -1,7 +1,7 @@
 import image from './assets/image3.svg';
 import Image from 'next/image';
 
-const SectionOne = () => {
+const Identidad = () => {
   return (
     <div className="h-auto w-full flex items-center justify-center">
       <div id='section-one' className='h-auto w-full md:w-[80%] text-[#001d3d] relative z-[1] px-10 md:px-6 p-6'>
@@ -33,11 +33,13 @@ const SectionOne = () => {
           </p>
         </div>
 
-        <div className='w-full flex-center'><h2>cultura</h2></div>
+        <div className='w-full flex-center'>
+          <h2 className='text-[2rem] md:text-[2.3rem] text-[#9b6500]'>cultura</h2>
+        </div>
 
         <div className="h-auto flex items-center justify-center w-full flex-col md:flex-row">
-          <div className="h-[180px] flex-col p-6 md:h-[230px] w-[380px] bg-[#3d0000] text-white rounded my-10 flex items-center justify-center">
-            <h2 className="text-[1.5rem] my-[5px]">testimonio</h2>
+          <div className="h-[180px] flex-col p-6 md:h-[230px] w-[380px] bg-[#c78408] text-white rounded my-10 flex items-center justify-center">
+            <h2 className="text-[1.5rem] my-[5px]">Evento</h2>
             <p className="my-[8px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis eum excepturi quia quod laborum veniam sed ullam delectus similique voluptates</p>
           </div>
 
@@ -57,8 +59,8 @@ const SectionOne = () => {
             fugiat similique fugit rerum quod inventore, dicta expedita!
           </p>
 
-          <div className="h-[180px] flex-col p-6 md:h-[230px] w-[380px] bg-[#3d0000] text-white rounded my-10 flex items-center justify-center">
-            <h2 className="text-[1.5rem] my-[5px]">testimonio</h2>
+          <div className="h-[180px] flex-col p-6 md:h-[230px] w-[380px] bg-[#006de2] text-white rounded my-10 flex items-center justify-center">
+            <h2 className="text-[1.5rem] my-[5px]">Evento</h2>
             <p className="my-[8px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, veritatis eum excepturi quia quod laborum veniam sed ullam delectus similique voluptates.</p>
           </div>
         </div>
@@ -68,4 +70,4 @@ const SectionOne = () => {
   )
 }
 
-export default SectionOne
+export default Identidad
