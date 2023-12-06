@@ -6,7 +6,7 @@ import { History } from './sections/history/History';
 const Identidad = () => {
   return (
     <div className="h-auto w-full flex items-center justify-center">
-      <div id='section-one' className='h-auto w-full md:w-[80%]  text-[#001d3d] bg-white relative z-[1] px-10 md:px-6 p-6'>
+      <div id='section-one' className='h-auto w-full md:w-[80%]  text-[#001d3d] bg-white relative z-[1] px-7 md:px-6 p-6'>
 
         <div className="h-[80px] md:h-[140px] flex items-end justify-start w-full md:px-10">
           <h1 className="text-[2rem] md:text-[2.3rem]">Identidad escolar</h1>
