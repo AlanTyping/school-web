@@ -27,9 +27,9 @@ export default function Home() {
       <Presentation />
       <Guide />
       <Section />
-      <SectionTwo />
+      {/* <SectionTwo />
       <SectionThree />
-      <SectionFour />
+      <SectionFour /> */}
       <Testimonios />
       <Contacto />
       <Footer />
