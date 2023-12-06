@@ -29,7 +29,7 @@ export const Carousel = ({ children: slides, autoSlide = false, autoSlideInterva
   }, [curr]);
 
   return (
-    <div className='overflow-hidden relative w-[95vw] md:w-[25vw] md:mt-[-100px]'>
+    <div className='overflow-hidden relative w-[95vw] md:w-[25vw] mt-[-120px] md:mt-[-100px]'>
       
       <div className='flex transition-transform ease-out-in duration-700' style={{ transform: transformValue }}>
         {slides}

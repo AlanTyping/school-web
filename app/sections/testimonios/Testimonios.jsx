@@ -39,7 +39,7 @@ export const Testimonios = () => {
   ]
 
   return (
-    <section className='w-full md:w-[80%] bg-white flex-center flex-col pb-10 rounded'>
+    <section id='testimonios' className='w-full md:w-[80%] bg-white flex-center flex-col pb-10 rounded'>
 
        <div className='w-full flex-center'>
         <h2 className='text-[2rem] md:text-[2.3rem] text-[#9b6500] mb-[30px] mt-10'>Testimonios</h2>
@@ -48,6 +48,7 @@ export const Testimonios = () => {
       <TestimoniosCarousel autoSlide={true}>
         {testimonios.map((e, i ) => <Testimonio key={i} nombre={e.nombre} texto={e.texto} />)}
       </TestimoniosCarousel>
+      
     </section>
   )
 }
