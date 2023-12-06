@@ -4,7 +4,7 @@ import image from './assets/image2.svg'
 export const History = () => {
   return (
     <>
-      <div className='w-full flex-center'>
+      <div id="history" className='w-full flex-center'>
         <h2 className='text-[2rem] md:text-[2.3rem] text-[#9b6500] mt-[50px]'>Historia</h2>
       </div>
 

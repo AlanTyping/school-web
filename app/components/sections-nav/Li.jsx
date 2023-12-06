@@ -3,10 +3,10 @@
 // import { HashLink as Link } from 'react-router-hash-link';
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 
-
-const Li = ({ name, hash, active, index }) => {
+const Li = ({ image, hash, active, index }) => {
   const variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -24,7 +24,7 @@ const Li = ({ name, hash, active, index }) => {
       variants={variants}
       className='h-full w-full'>
       <Link href={`${hash}`} className={`h-full w-full flex justify-center items-center ${active === (index + 1) && 'bg-[#ffa600a6]'}`}>
-        {name}
+        <Image src={image} alt="" height={25} width={25} />
       </Link>
     </motion.li>
   )

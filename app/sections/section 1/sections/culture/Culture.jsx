@@ -40,7 +40,7 @@ export const Culture = () => {
   ]
 
   return (
-    <div id='cultura' className='w-full flex-center flex-col'>
+    <div id='culture' className='w-full flex-center flex-col'>
       <h2 className='text-[2rem] md:text-[2.3rem] text-[#9b6500] pb-6 pt-10'>Cultura</h2>
       <CultureCarousel>
       {eventos.map((e, i) => (

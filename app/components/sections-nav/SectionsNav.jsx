@@ -3,31 +3,34 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { scrollStorage } from '@/zustand/scrollStorage';
-// import { BrowserRouter } from 'react-router-dom';
-// import { useRouter } from 'next/navigation';
 import Li from './Li';
+import school from './assets/school.svg';
+import culture from './assets/culture.svg';
+import history from './assets/history.svg';
+import quotes from './assets/quotes.svg';
 
 
 const li = [
   {
-    name: '1',
-    hash: '#section-one'
+    image: school,
+    hash: '#identity'
   },
   {
-    name: '2',
-    hash: '#section-two'
+    image: culture,
+    hash: '#culture'
   },
   {
-    name: '3',
-    hash: '#section-three'
+    image: history,
+    hash: '#history'
   },
   {
-    name: '4',
-    hash: '#section-four'
+    image: quotes,
+    hash: '#quotes'
   }
 ]
 
 const SectionsNav = () => {
+  const [navActive, setNavActive] = useState(false);
   const [active, setActive] = useState(0);
   const { scroll, changeScroll } = scrollStorage();
   const [width, setWidth] = useState(0);
@@ -55,18 +58,22 @@ const SectionsNav = () => {
 
   useEffect(() => {
     if (width < 600) {
-      if (scroll < 1500) {
-        setActive(1)
-      } else if (scroll < 1600) {
-        setActive(2)
-      } else if (scroll < 2300) {
-        setActive(3)
-      } else if (scroll < 2600) {
-        setActive(4)
+      if (scroll > 800 && scroll < 4050) {
+        setNavActive(true);
+        if (scroll < 1850) {
+          setActive(1)
+        } else if (scroll < 2650) {
+          setActive(2)
+        } else if (scroll < 3950) {
+          setActive(3)
+        } else if (scroll < 4050) {
+          setActive(4)
+        }
+      } else {
+        setNavActive(false)
       }
-    }
 
-    if (width < 1400) { 
+    } else if (width < 1400) {
       if (scroll < 600) {
         setActive(0)
       } else if (scroll < 1200) {
@@ -92,13 +99,13 @@ const SectionsNav = () => {
   return (
     <motion.nav
       initial="hidden"
-      animate={scroll > 600 ? "visible" : "hidden"}
+      animate={navActive ? "visible" : "hidden"}
       exit={{ opacity: 0 }}
       variants={container}
 
       className={` h-[60px] w-[200px] bottom-[5%] rounded border-x-[2px] border-[#ffa500] bg-[#001d3d7e] z-[2] fixed md:left-6 md:h-[200px] md:w-[55px] md:top-[35%]`}>
       <ul className='flex flex-row md:flex-col justify-center text-white h-full w-full rounded-l-lg'>
-        {li.map((e, i) => <Li name={e.name} hash={e.hash} active={active} key={e.hash} index={i} />)}
+        {li.map((e, i) => <Li image={e.image} hash={e.hash} active={active} key={e.hash} index={i} />)}
       </ul>
     </motion.nav>
   )
