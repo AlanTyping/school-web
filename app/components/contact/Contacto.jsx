@@ -14,7 +14,7 @@ export const Contacto = () => {
 
 
         <div className='flex-center w-full sm:order-last sm:w-[40%] bg-[#001d3d] pb-6 rounded'>
-          <div className='flex-center flex-col w-[70%]'>
+          <div className='flex-center flex-col w-[80%] sm:w-[70%]'>
             <h2 className='text-[1.3rem] my-2 mt-8'>Mejorando la escuela</h2>
 
             <div className='w-full flex items-center justify-between mt-4'>
