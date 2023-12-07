@@ -16,6 +16,9 @@ img {
 
 * {
     scrollbar-color: #5b73ac #001d3d;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -34,7 +37,7 @@ img {
 }
 
 @media (width > 1436px) {
-    p, span, li, h3 {
-        font-size: 1.2rem;
+    p, span, h3 {
+        font-size: 1.4rem;
     }
 }

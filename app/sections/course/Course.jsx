@@ -7,7 +7,7 @@ export const Course = () => {
         <h2 className='text-[2rem] 2xl:text-[2.5rem]'>Info cursada</h2>
       </div>
 
-      <ul className='mt-6 w-full'>
+      <ul className='mt-6 w-full 2xl:text-[1.4rem]'>
         <li className='py-4 list-disc'>Mesas de exámenes</li>
         <li className='py-4 list-disc'>Horarios del personal</li>
         <li className='py-4 list-disc'>Cronogramas</li>

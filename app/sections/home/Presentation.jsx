@@ -29,12 +29,12 @@ const Presentation = () => {
         ))]}
       </Carousel>
 
-      <div className='w-full md:flex flex-col absolute bottom-[40px]  items-center '>
+      <div className='w-full md:flex flex-col absolute bottom-[40px] 2xl:bottom-[80px] items-center '>
         <GuideNav />
       </div>
 
-      <Link href={`#section-one`} className='hidden md:flex absolute bottom-[10px] '>
-        <Image src={arrow} alt='arrow' height={40} width={40} />
+      <Link href={`#info`} className='hidden md:flex absolute bottom-[10px] 2xl:bottom-[20px]'>
+        <Image src={arrow} alt='arrow' className='h-[40px] w-[40px] 2xl:h-[60px] 2xl:w-[60px]' />
       </Link>
     </div>
   )

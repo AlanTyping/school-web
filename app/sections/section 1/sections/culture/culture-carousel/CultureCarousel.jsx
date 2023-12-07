@@ -33,7 +33,7 @@ export const CultureCarousel = ({ children: slides, autoSlide = false, autoSlide
   return (
     <>
 
-      <button onClick={prev} className='p-1 hidden md:flex rounded-full shadow absolute left-[20px] md:left-[80px]'>
+      <button onClick={prev} className='p-1 hidden md:flex rounded-full shadow absolute left-[20px] md:left-[80px] 2xl:left-[125px]'>
         <Image src={arrow} height={50} width={50} alt='evento' className='rotate-90' />
       </button>
 
@@ -61,7 +61,7 @@ export const CultureCarousel = ({ children: slides, autoSlide = false, autoSlide
         </div>
       </div>
 
-      <button onClick={next} className='p-1 hidden md:flex rounded-full shadow absolute right-[20px] md:right-[80px]'>
+      <button onClick={next} className='p-1 hidden md:flex rounded-full shadow absolute right-[20px] md:right-[80px] 2xl:right-[125px]'>
         <Image src={arrow} height={50} width={50} alt='' className='rotate-[270deg]' />
       </button>
     </>
