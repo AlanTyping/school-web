@@ -17,7 +17,7 @@ const DynamicHeader = () => {
 
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
-        if (currentScrollPosition < scroll) {
+        if (currentScrollPosition > scroll) {
           setHidden(true);
         } else {
           if (currentScrollPosition > 400) {

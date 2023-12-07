@@ -13,7 +13,7 @@ const li = [
     name: 'unirse',
     hash: '/inscripcion',
     img: student
-  },
+  }, 
   {
     name: 'contacto',
     hash: '#contacto',

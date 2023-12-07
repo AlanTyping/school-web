@@ -42,7 +42,7 @@ export const Testimonios = () => {
     <section id='quotes' className='w-full md:w-[80%] bg-white flex-center flex-col pb-24 rounded'>
 
        <div className='w-full flex-center'>
-        <h2 className='text-[2rem] md:text-[2.3rem] text-[#9b6500] mb-[30px] mt-24'>Testimonios</h2>
+        <h2 className='text-[2rem] md:text-[2.3rem] text-[#9b6500] mb-[30px] mt-20'>Testimonios</h2>
       </div>
 
       <TestimoniosCarousel autoSlide={true}>
