@@ -64,8 +64,14 @@ const SectionsNav = () => {
       } else {
         setNavActive(false)
       }
-    } else if (width < 2000) {
+    } else if (width < 1500) {
       if (scroll > 800 && scroll < 3300) {
+        setNavActive(true);
+      } else {
+        setNavActive(false)
+      }
+    } else if (width < 5000) {
+      if (scroll > 1300 && scroll < 4000) {
         setNavActive(true);
       } else {
         setNavActive(false)
@@ -88,7 +94,8 @@ const SectionsNav = () => {
       exit={{ opacity: 0 }}
       variants={container}
 
-      className={` h-[60px] w-[200px] bottom-[3%] rounded border-x-[2px] border-[#ffa500] bg-[#001d3d7e] z-[2] fixed md:left-6 md:h-[200px] md:w-[55px] md:top-[35%]`}>
+      className={`h-[60px] w-[200px] bottom-[3%] rounded border-x-[2px] border-[#ffa500] bg-[#001d3d7e]
+       z-[2] fixed md:left-6 md:h-[200px] md:w-[55px] 2xl:h-[300px] 2xl:w-[80px] md:top-[35%]`}>
       <ul className='flex flex-row md:flex-col justify-center text-white h-full w-full rounded-l-lg'>
         {li.map((e, i) => <Li image={e.image} hash={e.hash} active={active} key={e.hash} index={i} />)}
       </ul>

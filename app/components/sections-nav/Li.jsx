@@ -24,7 +24,7 @@ const Li = ({ image, hash, active, index }) => {
       variants={variants}
       className='h-full w-full'>
       <Link href={`${hash}`} className={`h-full w-full flex justify-center items-center `}>
-        <Image src={image} alt="" height={25} width={25} />
+        <Image src={image} alt="" className="h-[25px] w-[25px] 2xl:h-[35px] 2xl:w-[35px]" />
       </Link>
     </motion.li>
   )
