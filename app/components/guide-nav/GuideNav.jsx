@@ -5,14 +5,14 @@ import contacto from './svg/contacto.svg';
 
 const li = [
   {
+    name: 'info',
+    hash: '#info',
+    img: info
+  },
+  {
     name: 'unirse',
     hash: '/inscripcion',
     img: student
-  },
-  {
-    name: 'info',
-    hash: '#section-one',
-    img: info
   },
   {
     name: 'contacto',

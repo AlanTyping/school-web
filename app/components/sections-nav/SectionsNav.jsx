@@ -36,6 +36,8 @@ const SectionsNav = () => {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
+    setWidth(window.innerWidth);
+
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
@@ -49,7 +51,6 @@ const SectionsNav = () => {
     };
   }, []);
 
-
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setActive(window.location.hash)
@@ -57,33 +58,17 @@ const SectionsNav = () => {
   }, []);
 
   useEffect(() => {
-    if (width < 600) {
+    if (width < 800) {
       if (scroll > 800 && scroll < 3880) {
         setNavActive(true);
-        if (scroll < 1850) {
-          setActive(1)
-        } else if (scroll < 2650) {
-          setActive(2)
-        } else if (scroll < 3750) {
-          setActive(3)
-        } else if (scroll < 4050) {
-          setActive(4)
-        }
       } else {
         setNavActive(false)
       }
-
-    } else if (width < 1400) {
-      if (scroll < 600) {
-        setActive(0)
-      } else if (scroll < 1200) {
-        setActive(1)
-      } else if (scroll < 2000) {
-        setActive(2)
-      } else if (scroll < 2600) {
-        setActive(3)
-      } else if (scroll < 3100) {
-        setActive(4)
+    } else if (width < 2000) {
+      if (scroll > 800 && scroll < 3300) {
+        setNavActive(true);
+      } else {
+        setNavActive(false)
       }
     }
   }, [scroll]);
