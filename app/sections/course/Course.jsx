@@ -4,7 +4,7 @@ export const Course = () => {
   return (
     <section id='info' className='flex-col flex-center text-white w-[90%] sm:w-[80%] px-7 sm:px-24 py-14'>
       <div className='w-full flex-center'>
-        <h2 className='text-[2rem]'>Info cursada</h2>
+        <h2 className='text-[2rem] 2xl:text-[2.5rem]'>Info cursada</h2>
       </div>
 
       <ul className='mt-6 w-full'>

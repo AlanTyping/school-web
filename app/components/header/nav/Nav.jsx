@@ -14,7 +14,7 @@ const Nav = () => {
   }
 
   return (
-    <nav className='w-[50%] md:w-[20%] hidden md:mr-[5vw] h-full md:flex flex-row justify-end md:text-[1.1rem] rounded-xl 2xl:text-[1.5rem] absolute right-0'>
+    <nav className='w-[50%] md:w-[20%] hidden md:mr-[5vw] h-full md:flex flex-row justify-end md:text-[1.1rem] 2xl:text-[1.5rem] rounded-xl absolute right-0'>
       <motion.ul className='flex flex-row justify-evenly text-white h-full w-full rounded-l-lg'>
         <motion.li whileHover={{ color: '#ffa500' }}
           className='h-full px-4'>

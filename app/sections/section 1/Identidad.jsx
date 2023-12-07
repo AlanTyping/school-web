@@ -9,7 +9,7 @@ const Identidad = () => {
       <div className='h-auto w-full md:w-[80%] text-[#001d3d] bg-white relative z-[1] px-7 p-6'>
 
         <div className="h-[80px] md:h-[180px] flex items-center justify-start w-full md:px-10">
-          <h1 className="text-[2rem] md:text-[2.3rem]">Identidad escolar</h1>
+          <h1 className="text-[2rem] md:text-[2.3rem] 2xl:text-[2.8rem]">Identidad escolar</h1>
         </div>
 
         <div className="h-auto flex items-center flex-col justify-center w-full mt-4 md:px-10">

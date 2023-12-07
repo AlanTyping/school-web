@@ -6,10 +6,9 @@ import Footer from '../components/footer/Footer';
 
 const Inscription = () => {
   return (
-    <div className='flex flex-col items-center justify-center w-full relative'>
-      <Header />
+    <div className='flex flex-col items-center bg-white justify-center w-full relative'>
 
-      <div className='w-full md:w-[50%] 2xl:w-[33%] flex items-start mt-5 md:mt-[80px] 2xl:mt-[120px]'>
+      <div className='w-full md:w-[50%] 2xl:w-[33%] flex items-start'>
         <Image className='ml-4 h-[150px] w-[250px]' alt='school-logo' src={logo} />
       </div>
 

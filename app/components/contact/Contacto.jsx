@@ -8,7 +8,7 @@ import map from './assets/map.svg';
 export const Contacto = () => {
   return (
     <section id='contacto' className='bg-[#001d3d] w-full flex-center flex-col text-white pb-12'>
-      <h2 className='text-[1.8rem] py-10 pt-20'>Contacto</h2>
+      <h2 className='text-[1.8rem] 2xl:text-[2.4rem] py-10 pt-20'>Contacto</h2>
 
       <div className='flex-center flex-col w-full sm:flex-row'>
 
