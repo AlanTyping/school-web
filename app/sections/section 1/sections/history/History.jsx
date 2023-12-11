@@ -5,7 +5,7 @@ export const History = () => {
   return (
     <>
       <div id="history" className='w-full flex-center'>
-        <h2 className='text-[2rem] md:text-[2.3rem] 2xl:text-[2.8rem] text-[#9b6500] mt-20'>Historia</h2>
+        <h2 className='text-[2rem] md:text-[2.3rem] 2xl:text-[2.8rem] text-[#9b6500] mt-10 sm:mt-20'>Historia</h2>
       </div>
 
       <div className="h-auto flex items-center justify-evenly w-full flex-col md:flex-row">
