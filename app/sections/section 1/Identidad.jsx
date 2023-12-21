@@ -22,7 +22,7 @@ const Identidad = () => {
 
 
         <div className="h-auto flex items-center justify-start w-full flex-col md:px-10 2xl:px-24 md:flex-row">
-          <div className="h-[220px] md:order-2 flex-col p-6 md:p-0 md:h-[240px] md:w-[450px] 2xl:h-[400px] 2xl:w-[660px] w-full bg-[#e6e6e6] text-white rounded my-10 flex items-center justify-center">
+          <div className="h-[220px] md:order-2 flex-col p-6 md:p-0 md:h-[240px] md:w-[450px] 2xl:h-[400px] 2xl:w-[660px] w-full text-white rounded my-10 flex items-center justify-center">
             <Image src={image} height={60} width={60} alt='identidad' />
           </div>
 
