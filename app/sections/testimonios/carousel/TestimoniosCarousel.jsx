@@ -37,13 +37,13 @@ export const TestimoniosCarousel = ({ children: slides, autoSlide = false, autoS
         {slides}
       </div>
 
-      <div className="absolute bottom-[-10px] w-full flex items-center justify-between p-4">
+      <div className="absolute bottom-[-10px] w-full 2xl:mb-2 flex items-center justify-between p-4">
         <button onClick={prev} className='p-1 rounded-full shadow bg-[#2563eb]'>
-          <Image src={arrow} height={30} width={30} alt='' className='rotate-90' />
+          <Image src={arrow} height={30} width={30} alt='' className='rotate-90 2xl:ml-14' />
         </button>
 
         <button onClick={next} className='p-1 rounded-full shadow bg-[#2563eb]'>
-          <Image src={arrow} height={30} width={30} alt='' className='rotate-[270deg]' />
+          <Image src={arrow} height={30} width={30} alt='' className='rotate-[270deg] 2xl:mr-14' />
         </button>
       </div>
 
