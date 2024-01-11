@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import image from './culture-carousel/assets/image3.svg';
 import Image from 'next/image';

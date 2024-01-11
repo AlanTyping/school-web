@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
 import Nav from './nav/Nav';
@@ -16,8 +18,6 @@ const Header = () => {
           <h2>Tu logo escolar</h2>
         </div>
       </Link>
-
-
     </header>
   )
 }
