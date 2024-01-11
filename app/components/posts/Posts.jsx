@@ -12,7 +12,7 @@ export const Posts = async () => {
     <div className="w-full rounded my-20 flex flex-col items-center py-10 bg-[#00244d] h-[800px] overflow-y-auto">
       {
         posts.map((post, i) => {
-          const { fecha, titulo, subtitulo, descripcion, link, imagen } = post
+          const { fecha, titulo, subtitulo, descripcion, link, formattedImagen } = post
           return (
             <Post
               key={i}
@@ -21,7 +21,7 @@ export const Posts = async () => {
               subtitulo={subtitulo}
               descripcion={descripcion}
               link={link}
-              imagen={imagen}
+              imagen={formattedImagen}
             />)
         })
       }

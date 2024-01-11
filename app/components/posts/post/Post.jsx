@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import logo from './svg/school.svg'
 
-export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) => {
+export const Post = ({ fecha, titulo, subtitulo, descripcion, link, formattedImagen }) => {
   return (
     <div className="flex flex-col p-6 pb-4 pt-8 items-center text-white bg-blue-900 my-5 rounded w-[90%]">
 
@@ -20,7 +20,7 @@ export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) =>
 
 
       <div className="w-[90%]">
-        {imagen && <div className="relative mb-6 h-[200px] w-full"><Image objectFit="contain" fill={true} className="rounded" alt="" src={imagen} /></div>}
+        {formattedImagen && <div className="relative mb-6 h-[200px] w-full"><Image objectFit="contain" fill={true} className="rounded" alt="" src={imagen} /></div>}
 
         {titulo && <div className="my-1 text-[1.7rem]"><h1>{titulo}</h1></div>}
 
