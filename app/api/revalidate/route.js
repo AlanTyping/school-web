@@ -3,5 +3,5 @@ import { revalidateTag } from "next/cache";
 export async function GET() {
   revalidateTag("posts");
 
-  return Response.json({ revalidated: true })
+  return { body: JSON.stringify({ revalidated: true }), status: 200, headers: { "Content-Type": "application/json" } };
 };
