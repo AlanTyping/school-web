@@ -1,7 +1,8 @@
 import { revalidateTag } from "next/cache";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   revalidateTag("posts");
 
-  return Response.json({ message: "hola" })
+  return NextResponse({message: "hola"})
 };
