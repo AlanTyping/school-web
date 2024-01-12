@@ -17,8 +17,6 @@ export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) =>
       </div>
 
 
-
-
       <div className="w-[90%]">
         {imagen && <div className="relative mb-6 h-[200px] w-full"><Image objectFit="contain" fill={true} className="rounded" alt="" src={imagen} /></div>}
 
@@ -28,7 +26,7 @@ export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) =>
 
         {descripcion && <div className="my-5 text-[#ccc]"><p>{descripcion}</p></div>}
 
-        {link !== '\r' && <div className=""><Link href={link} target="blank">{link}</Link></div>}
+        {link && <div className=""><Link href={link} target="blank">{link}</Link></div>}
 
         {fecha && <div className="mb-2 mt-6 text-end text-[#ccc] text-[1.1rem]"><p>{fecha}</p></div>}
       </div>
