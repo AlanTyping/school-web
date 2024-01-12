@@ -1,7 +1,11 @@
 import { revalidateTag } from "next/cache";
 
 export async function GET() {
-  revalidateTag("posts");
+  try {
+    revalidateTag("posts");
 
-  return Response.json({revalidated: true})
+  return Response.json({message: "hola"})
+  } catch (error) {
+    console.log(error)
+  }
 };
