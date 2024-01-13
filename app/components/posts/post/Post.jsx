@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from './svg/school.svg'
+import { Image } from 'next/image'
 
 export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) => {
   return (
@@ -18,7 +19,7 @@ export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) =>
 
 
       <div className="w-[90%]">
-        {imagen && <div className="relative mb-6 h-[200px] w-full"><Imagen style={{objectFit: "contain"}} fill={true} className="rounded" alt="" src={imagen} /></div>}
+        {imagen && <div className="relative mb-6 h-[200px] w-full"><Image style={{objectFit: "contain"}} fill={true} className="rounded" alt="" src={imagen} /></div>}
 
         {titulo && <div className="my-1 text-[1.7rem]"><h1>{titulo}</h1></div>}
 
