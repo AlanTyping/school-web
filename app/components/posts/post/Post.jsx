@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from './svg/school.svg'
-import { Image } from 'next/image'
 
 export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) => {
   return (
