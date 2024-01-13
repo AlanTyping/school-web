@@ -18,7 +18,7 @@ export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) =>
 
 
       <div className="w-[90%]">
-        {imagen && <div className="relative mb-6 h-[200px] w-full"><Image objectFit="contain" fill={true} className="rounded" alt="" src={imagen} /></div>}
+        {imagen && <div className="relative mb-6 h-[200px] w-full"><Image fill={true} className="rounded" alt="" src={imagen} /></div>}
 
         {titulo && <div className="my-1 text-[1.7rem]"><h1>{titulo}</h1></div>}
 

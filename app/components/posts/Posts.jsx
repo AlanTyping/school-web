@@ -6,8 +6,6 @@ import { api } from '@/app/api';
 export const Posts = async () => {
   const posts = await api.posts();
 
-  console.log(posts)
-
   return (
     <div className="w-full rounded my-20 flex flex-col items-center py-10 bg-[#00244d] h-[800px] overflow-y-auto">
       {
