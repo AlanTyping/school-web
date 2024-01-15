@@ -4,5 +4,5 @@ import { NextResponse } from "next/server";
 export async function GET() {
   revalidateTag("posts");
 
-  return NextResponse.json({ message: "hola" });
+  return NextResponse.json({revalidated: true});
 };
