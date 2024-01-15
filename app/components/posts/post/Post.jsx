@@ -3,13 +3,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import logo from './svg/school.svg'
 import linkSvg from './svg/link.svg'
-import { DM_Sans } from 'next/font/google'
+import { Arimo } from 'next/font/google'
 
-const montserrat = DM_Sans({ subsets: ['latin'], weight: "300" });
+const montserrat = Arimo({ subsets: ['latin'], weight: "400" });
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen }) => {
   return (
-    <div className="w-[90%] flex flex-col p-6 pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded max-w-[500px]">
+    <div className="w-[90%] flex flex-col max-w-[500px] px-2 pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded">
 
       <div className="w-[95%] flex items-center flex-row mb-5">
         <div className="bg-[#001d3d] h-[50px] w-[50px] rounded-[25px] flex-center">
@@ -23,18 +23,22 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen }) => {
 
       <div className="w-[90%]">
         {imagen && <div className="relative mb-6 h-[160px] sm:h-[250px] w-full">
-          <Image style={{ objectFit: "contain" }} fill={true} className="rounded" alt="" src={imagen} />
+          <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className="rounded" alt="" src={imagen} />
         </div>}
 
         {titulo && <div className={`my-1 text-[1.5rem]`}><h1>{titulo}</h1></div>}
 
-        {descripcion && <div className={`my-5 text-[#eee] text-[1rem] ${montserrat.className}`}><p>{descripcion}</p></div>}
+        {descripcion && <div className={`my-5 text-[#ddd] flex w-full justify-center text-[1.1rem] ${montserrat.className}`}>
+          <p className='w-[95%]'>{descripcion}</p>
+        </div>}
 
-        {link && <div className={`text-[0.85rem] flex`}><Link className='flex bg-[#001d3d] rounded p-2 pr-4 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />{link}</Link></div>}
+        {link && <div className={`text-[0.85rem] flex justify-center`}>
+          <Link className='flex w-[95%] bg-[#001d3d] rounded p-2 pr-4 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />{link}</Link>
+          </div>}
 
         {fecha && <div className="mb-2 mt-6 justify-end flex text-[#ccc] text-[1rem]">
           <p className='border-b-[2px] border-b-[#ffa500]'>{fecha}</p>
-          </div>}
+        </div>}
       </div>
 
     </div>
