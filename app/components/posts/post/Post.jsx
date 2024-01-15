@@ -3,11 +3,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import logo from './svg/school.svg'
 import linkSvg from './svg/link.svg'
-import { Roboto } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 
-const montserrat = Roboto({ subsets: ['latin'], weight: "300" });
+const montserrat = DM_Sans({ subsets: ['latin'], weight: "300" });
 
-export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) => {
+export const Post = ({ fecha, titulo, descripcion, link, imagen }) => {
   return (
     <div className="w-[90%] flex flex-col p-6 pb-4 pt-8 items-center text-white bg-[#1a3275] my-5 rounded sm:max-w-[500px]">
 
@@ -26,9 +26,7 @@ export const Post = ({ fecha, titulo, subtitulo, descripcion, link, imagen }) =>
           <Image style={{ objectFit: "contain" }} fill={true} className="rounded" alt="" src={imagen} />
         </div>}
 
-        {titulo && <div className={`my-1 text-[1.7rem] `}><h1>{titulo}</h1></div>}
-
-        {subtitulo && <div className={`mb-5 text-[1.32rem] text-[#ccc] `}><h1>{subtitulo}</h1></div>}
+        {titulo && <div className={`my-1 text-[1.32rem]`}><h1>{titulo}</h1></div>}
 
         {descripcion && <div className={`my-5 text-[#ccc] ${montserrat.className}`}><p>{descripcion}</p></div>}
 
