@@ -9,9 +9,9 @@ const montserrat = Arimo({ subsets: ['latin'], weight: "400" });
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen }) => {
   return (
-    <div className="w-[90%] flex flex-col max-w-[500px] px-2 pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded">
+    <div className="w-[90%] flex flex-col max-w-[500px] pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded">
 
-      <div className="w-[95%] flex items-center flex-row mb-5">
+      <div className="w-[90%] flex items-center flex-row mb-5">
         <div className="bg-[#001d3d] h-[50px] w-[50px] rounded-[25px] flex-center">
           <Image height={30} width={30} className="rounded" alt="" src={logo} />
         </div>
@@ -29,14 +29,14 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen }) => {
         {titulo && <div className={`my-1 text-[1.5rem]`}><h1>{titulo}</h1></div>}
 
         {descripcion && <div className={`my-5 text-[#ddd] flex w-full justify-center text-[1.1rem] ${montserrat.className}`}>
-          <p className='w-[95%]'>{descripcion}</p>
+          <p className='w-[97%]'>{descripcion}</p>
         </div>}
 
         {link && <div className={`text-[0.85rem] flex justify-center`}>
-          <Link className='flex w-[95%] bg-[#001d3d] rounded p-2 pr-4 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />{link}</Link>
+          <Link className='flex w-[97%] bg-[#001d3d] rounded p-2 pr-4 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />{link}</Link>
           </div>}
 
-        {fecha && <div className="mb-2 mt-6 justify-end flex text-[#ccc] text-[1rem]">
+        {fecha && <div className="mb-2 mt-6 justify-end flex text-[#ccc] text-[1.05rem]">
           <p className='border-b-[2px] border-b-[#ffa500]'>{fecha}</p>
         </div>}
       </div>
