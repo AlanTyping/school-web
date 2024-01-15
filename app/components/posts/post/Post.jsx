@@ -32,8 +32,8 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen }) => {
           <p className='w-[97%]'>{descripcion}</p>
         </div>}
 
-        {link && <div className={`text-[0.85rem] flex justify-center`}>
-          <Link className='flex w-[97%] bg-[#001d3d] rounded p-2 pr-4 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />{link}</Link>
+        {link && <div className={`text-[0.85rem] w-[97%] flex justify-start`}>
+          <Link className='flex bg-[#001d3d] rounded p-1 pr-4 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />{link}</Link>
           </div>}
 
         {fecha && <div className="mb-2 mt-6 justify-end flex text-[#ccc] text-[1.05rem]">
