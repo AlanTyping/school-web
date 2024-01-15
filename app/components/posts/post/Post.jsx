@@ -28,9 +28,9 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen }) => {
 
         {titulo && <div className={`my-1 text-[1.32rem]`}><h1>{titulo}</h1></div>}
 
-        {descripcion && <div className={`my-5 text-[#ccc] ${montserrat.className}`}><p>{descripcion}</p></div>}
+        {descripcion && <div className={`my-5 text-[#eee] text-[1rem] ${montserrat.className}`}><p>{descripcion}</p></div>}
 
-        {link && <div className={`text-[0.9rem]`}><Link className='flex bg-[#001d3d] rounded p-2 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} />{link}</Link></div>}
+        {link && <div className={`text-[0.85rem] flex`}><Link className='flex bg-[#001d3d] rounded p-2 pr-4 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} />{link}</Link></div>}
 
         {fecha && <div className="mb-2 mt-6 justify-end flex text-[#ccc] text-[1rem]">
           <p className='border-b-[2px] border-b-[#ffa500]'>{fecha}</p>
