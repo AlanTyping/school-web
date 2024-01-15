@@ -7,7 +7,7 @@ export const Posts = async () => {
   const posts = await api.posts();
 
   return (
-    <div className="w-full rounded my-20 flex flex-col items-center py-10 bg-[#00244d] h-[800px] overflow-y-auto">
+    <div className="w-[50%] rounded my-20 flex flex-col items-center py-10 bg-[#001d3d] h-[800px] overflow-y-auto">
       {
         posts.map((post, i) => {
           const { fecha, titulo, subtitulo, descripcion, link, formattedImagen } = post
