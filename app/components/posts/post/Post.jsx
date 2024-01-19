@@ -42,7 +42,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
           </div>}
         </div> */}
 
-      <div className="w-[85%] flex flex-col flex-center">
+      <div className="w-[80%] flex flex-col flex-center">
         <div className="flex flex-col-reverse flex-center w-full">
           {imagen && <div className="relative h-[160px] sm:h-[210px] w-full mb-1">
             <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className="rounded" alt="" src={imagen} />
