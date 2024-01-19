@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --bg: #001d3d;
+}
+
 html {
     overflow-x: hidden;
 }
 
 body {
-    background: #001d3d;
+    background: var(--bg);
 }
 
 img {
@@ -37,7 +41,10 @@ img {
 }
 
 @media (width > 1436px) {
-    p, span, h3 {
+
+    p,
+    span,
+    h3 {
         font-size: 1.35rem;
     }
 }
