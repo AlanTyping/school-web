@@ -23,7 +23,7 @@ export const Posts = ({ posts }) => {
 
       <div className="w-full bg-white flex justify-start">
           <div className="ml-5 py-2 rounded-t-lg px-6 bg-[var(--bg)] flex-center">
-            <h2 className={`${figtree.className} text-[1.5rem] text-white`}>Últimos posts</h2>
+            <h2 className={`${figtree.className} text-[1.2rem] text-white`}>Últimos posts</h2>
           </div>
       </div>
 

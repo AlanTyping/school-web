@@ -6,7 +6,8 @@ import linkSvg from './svg/link.svg'
 import { Poppins, Figtree } from 'next/font/google'
 
 const figtree = Figtree({ subsets: ['latin'], weight: "300" });
-const figtreeBold = Figtree({ subsets: ['latin'], weight: "600" });
+const poppinsBold = Poppins({ subsets: ['latin'], weight: "400" });
+const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
 
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
@@ -18,7 +19,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
           <div className="bg-[var(--bg)] h-[50px] w-[50px] rounded-[25px] flex-center">
             <Image height={30} width={30} className="rounded" alt="" src={logo} />
           </div>
-          <div className="ml-[10px] text-[1.2rem]">
+          <div className={`ml-[10px] text-[1.2rem] ${poppinsBold.className}`}>
             <h1>Colegio Trinity</h1>
           </div>
         </div>
