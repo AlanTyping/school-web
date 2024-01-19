@@ -46,6 +46,7 @@ export const Posts = ({ posts }) => {
           })
         }
       </div>
+      
     </div>
   )
 }

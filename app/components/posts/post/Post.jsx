@@ -12,7 +12,7 @@ const figtreeBold = Figtree({ subsets: ['latin'], weight: "600" });
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
   return (
-    <div className={`${i > 2 && 'hidden'} mx-5 w-[80%] h-auto overflow-y-scroll flex flex-col max-w-[400px] pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
+    <div className={`${i > 2 && ''} mx-5 w-[80%] h-auto overflow-y-scroll flex flex-col max-w-[400px] pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
 
       {
         i > 2 &&
@@ -28,7 +28,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
 
 
 
-      <div onMouseOver={() => console.log("JWJWJWJW MANDARINAAA EAJSDJLKASJD")} className="w-[90%] flex flex-col flex-center">
+      <div className="w-[90%] flex flex-col flex-center">
         <div className="flex flex-col flex-center w-full">
           {imagen && <div className="relative h-[150px] sm:h-[250px] w-full">
             <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className="rounded" alt="" src={imagen} />
