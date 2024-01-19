@@ -31,7 +31,7 @@ export const Posts = ({ posts }) => {
         </div>
       </div>
 
-      <div className="w-full h-[400px] rounded flex py-5 flex-row items-start overflow-hidden">
+      <div className="w-full h-[400px] rounded flex py-5 flex-row items-start overflow-x-scroll overflow-y-hidden lg:overflow-x-hidden">
         {
           posts.map((post, i) => {
             const { fecha, titulo, descripcion, link, formattedImagen } = post
