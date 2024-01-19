@@ -12,7 +12,7 @@ const figtreeBold = Figtree({ subsets: ['latin'], weight: "600" });
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
   return (
-    <div className={`${i > 2 && ''} mx-5 w-[80%] h-auto overflow-y-scroll flex flex-col max-w-[400px] pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
+    <div className={`${i > 2 && ''} mx-5 w-[80%] h-auto flex flex-col max-w-[400px] pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
 
       {
         i > 2 &&
