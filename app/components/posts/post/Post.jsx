@@ -15,7 +15,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
     <div className={`${i > 2 && 'hidden'} overflow-y-auto mx-5 w-[80%] max-h-[300px] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
 
       {
-        <div className="w-[90%] flex items-center flex-row mb-5">
+        <div className="w-[90%] flex items-center flex-row ">
           <div className="bg-[var(--bg)] h-[50px] w-[50px] rounded-[25px] flex-center">
             <Image height={30} width={30} className="rounded" alt="" src={logo} />
           </div>
@@ -44,11 +44,11 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
 
       <div className="w-[80%] flex flex-col flex-center">
         <div className="flex flex-col-reverse flex-center w-full">
-          {imagen && <div className="relative h-[160px] sm:h-[210px] w-full mb-1">
+          {imagen && <div className="relative h-[160px] sm:h-[200px] w-full mt-1 mb-1">
             <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className="rounded" alt="" src={imagen} />
           </div>}
 
-          {titulo && <div className={`mb-2 text-[1.5rem] text-[#eee] flex w-full ${figtreeBold.className}`}>
+          {titulo && <div className={`text-[1.5rem] text-[#eee] mt-4 flex w-full ${figtreeBold.className}`}>
             <h1>{titulo}</h1>
           </div>}
         </div>
