@@ -21,14 +21,10 @@ export const Posts = ({ posts }) => {
         </div>
       </div> */}
 
-      <div className="w-full bg-white flex flex-row">
-        <div className="w-[50%] flex justu-start">
+      <div className="w-full bg-white flex justify-start">
           <div className="ml-5 py-2 rounded-t-lg px-6 bg-[var(--bg)] flex-center">
             <h2 className={`${figtree.className} text-[1.5rem] text-white`}>Últimos posts</h2>
           </div>
-        </div>
-        <div className="w-[50%] flex justify-center items-center">
-        </div>
       </div>
 
       <div className="w-full h-[400px] rounded flex py-5 flex-row items-start overflow-x-scroll overflow-y-hidden lg:overflow-x-hidden">

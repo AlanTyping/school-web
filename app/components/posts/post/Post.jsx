@@ -41,20 +41,20 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
           </div>}
         </div> */}
 
-      <div className="w-[90%] flex flex-col flex-center">
+      <div className="w-[85%] flex flex-col flex-center">
         <div className="flex flex-col-reverse flex-center w-full">
-          {imagen && <div className="relative h-[150px] sm:h-[210px] w-full mb-1">
+          {imagen && <div className="relative h-[160px] sm:h-[210px] w-full mb-1">
             <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className="rounded" alt="" src={imagen} />
           </div>}
 
-          {titulo && <div className={`mb-2 text-[1.5rem] text-[#eee] flex w-[97%] ${figtreeBold.className}`}>
+          {titulo && <div className={`mb-2 text-[1.5rem] text-[#eee] flex w-full ${figtreeBold.className}`}>
             <h1>{titulo}</h1>
           </div>}
         </div>
 
 
-        {descripcion && <div className={`text-[#ddd] flex w-full justify-center text-[1rem] ${figtree.className}`}>
-          <p className='w-[97%]'>{descripcion}</p>
+        {descripcion && <div className={`text-[#ddd] flex w-full mt-3 justify-center text-[1rem] ${figtree.className}`}>
+          <p>{descripcion}</p>
         </div>}
 
         {link && <div className={`text-[0.85rem] mt-5 w-[97%] flex justify-start`}>
