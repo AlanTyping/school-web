@@ -11,10 +11,9 @@ const figtreeBold = Figtree({ subsets: ['latin'], weight: "600" });
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
   return (
-    <div className={`${i > 2 && 'hidden'} mx-5 w-[80%] h-auto flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
+    <div className={`${i > 2 && 'hidden'} overflow-y-auto mx-5 w-[80%] max-h-[400px] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
 
       {
-        i > 2 &&
         <div className="w-[90%] flex items-center flex-row mb-5">
           <div className="bg-[var(--bg)] h-[50px] w-[50px] rounded-[25px] flex-center">
             <Image height={30} width={30} className="rounded" alt="" src={logo} />
