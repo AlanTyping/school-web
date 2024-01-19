@@ -3,34 +3,43 @@ import Link from 'next/link'
 import Image from 'next/image'
 import logo from './svg/school.svg'
 import linkSvg from './svg/link.svg'
-import { Poppins } from 'next/font/google'
+import { Poppins, Figtree } from 'next/font/google'
 
-const montserrat = Poppins({ subsets: ['latin'], weight: "300" });
+const poppins = Poppins({ subsets: ['latin'], weight: "300" });
+const figtree = Figtree({ subsets: ['latin'], weight: "300" });
+const figtreeBold = Figtree({ subsets: ['latin'], weight: "600" });
 
-export const Post = ({ fecha, titulo, descripcion, link, imagen }) => {
+
+export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
   return (
-    <div className="w-[90%] flex flex-col max-w-[500px] pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded">
+    <div className={`${i > 2 && 'hidden'} w-[80%] h-[400px] overflow-y-scroll flex flex-col max-w-[400px] pb-4 pt-8 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
 
-      <div className="w-[90%] flex items-center flex-row mb-5">
-        <div className="bg-[#001d3d] h-[50px] w-[50px] rounded-[25px] flex-center">
-          <Image height={30} width={30} className="rounded" alt="" src={logo} />
+      {
+        i > 2 &&
+        <div className="w-[90%] flex items-center flex-row mb-5">
+          <div className="bg-[#001d3d] h-[50px] w-[50px] rounded-[25px] flex-center">
+            <Image height={30} width={30} className="rounded" alt="" src={logo} />
+          </div>
+          <div className="ml-[10px] text-[1.2rem]">
+            <h1>Colegio Trinity</h1>
+          </div>
         </div>
-        <div className="ml-[10px] text-[1.2rem]">
-          <h1>Colegio Trinity</h1>
+      }
+
+
+
+      <div onMouseOver={() => console.log("JWJWJWJW MANDARINAAA EAJSDJLKASJD")} className="w-[90%] flex flex-col flex-center">
+        <div className="flex flex-col flex-center w-full">
+          {imagen && <div className="relative h-[150px] sm:h-[250px] w-full">
+            <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className="rounded" alt="" src={imagen} />
+          </div>}
+
+          {titulo && <div className={`my-5 text-[1.5rem] text-[#eee] flex w-[97%] ${figtreeBold.className}`}>
+            <h1 className='border-b-4 border-double border-[#ffa500]'>{titulo}</h1>
+          </div>}
         </div>
-      </div>
 
-
-      <div className="w-[85%] flex flex-col flex-center">
-        {imagen && <div className="relative mb-6 h-[160px] sm:h-[250px] w-full">
-          <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className="rounded" alt="" src={imagen} />
-        </div>}
-
-        {titulo && <div className={`my-1 text-[1.5rem] text-[#eee] w-[97%]`}>
-          <h1>{titulo}</h1>
-        </div>}
-
-        {descripcion && <div className={`mt-3 text-[#ddd] flex w-full justify-center text-[1rem] ${montserrat.className}`}>
+        {descripcion && <div className={`mt-3 text-[#ddd] flex w-full justify-center text-[1rem] ${figtree.className}`}>
           <p className='w-[97%]'>{descripcion}</p>
         </div>}
 

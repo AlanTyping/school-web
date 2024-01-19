@@ -7,8 +7,8 @@ import { Contacto } from "../components/contact/Contacto";
 import Footer from "../components/footer/Footer";
 import DynamicHeader from "../components/dynamic-header/DynamicHeader";
 import Header from "../components/header/Header";
-import { Posts } from "../components/posts/Posts";
-import { Poppins } from "next/font/google";
+import PostsApi from "../components/posts/PostsApi";
+import { Poppins } from "next/font/google"; 
 
 const poppins = Poppins({ subsets: ['latin'], weight: "400" });
 
@@ -22,7 +22,7 @@ export default function Page() {
 
       <Presentation />
 
-      <Posts />
+      <PostsApi />
       <Course />
 
 
