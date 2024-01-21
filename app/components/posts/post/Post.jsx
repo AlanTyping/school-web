@@ -12,7 +12,7 @@ const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
   return (
-    <div className={`${i > 2 && 'hidden'} overflow-y-auto mx-5 w-[80%] max-h-[300px] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
+    <div className={`${i > 2 && 'hidden'} cursor-auto overflow-y-auto mx-5 w-[80%] max-h-[300px] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
 
       {
         <div className="w-[90%] flex items-center flex-row ">

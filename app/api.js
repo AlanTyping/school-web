@@ -6,7 +6,6 @@ export const api = {
     { next: { tags: ["posts"]} })
     .then((jiji) => jiji.text())
       .then((data) => data.split('\n').slice(1).map((row) => {
-        console.log(row)
         const [fecha, titulo, descripcion, link, imagen] = row.split('\t')
         const formattedImagen = imagen.replace(/\\/g, '/').trim();
 
