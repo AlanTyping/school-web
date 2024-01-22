@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Post } from './post/Post';
 import { Figtree } from 'next/font/google';
+import Link from 'next/link';
 
 const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
 const figtree = Figtree({ subsets: ['latin'], weight: "300" });
@@ -28,7 +29,7 @@ export default function PostsDisplay ({ posts }) {
         </div>
         <div className="w-full md:w-[50%] flex justify-end items-center">
           <div className="pt-2 pb-1 rounded bg-white px-4 md:px-6 flex justify-center mr-6 md:mr-56">
-            <button className={`${figtreeBold.className} text-[1.2rem] text-[var(--bg)]`}>Ver más</button>
+            <Link href={'/posts'} className={`${figtreeBold.className} text-[1.2rem] text-[var(--bg)]`}>Ver más</Link>
           </div>
         </div>
       </div>

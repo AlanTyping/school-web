@@ -1,11 +1,12 @@
 import PostsApi from "./PostsApi";
 import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 
 export default function page() {
   return (
-    <main className="">
-      <Header />
+    <main>
       <PostsApi />
+      <Footer />
     </main>
   )
 }
