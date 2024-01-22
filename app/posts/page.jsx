@@ -1,38 +1,11 @@
-import SectionsNav from "../components/sections-nav/SectionsNav";
-import Presentation from "../sections/home/Presentation";
-import { Course } from "../sections/course/Course";
-import Identidad from "../sections/section 1/Identidad";
-import { Testimonios } from "../sections/testimonios/Testimonios";
-import { Contacto } from "../components/contact/Contacto";
-import Footer from "../components/footer/Footer";
-import DynamicHeader from "../components/dynamic-header/DynamicHeader";
+import PostsApi from "./PostsApi";
 import Header from "../components/header/Header";
-import PostsApi from "../components/posts/PostsApi";
-import { Poppins } from "next/font/google"; 
 
-const poppins = Poppins({ subsets: ['latin'], weight: "400" });
-
-export default function Page() {
-
+export default function page() {
   return (
-    <main className={`flex flex-col items-center justify-center w-full ${poppins.className}`}>
-      <DynamicHeader />
+    <main className="">
       <Header />
-      <SectionsNav />
-
-      <Presentation />
-
       <PostsApi />
-      <Course />
-
-
-      <Identidad />
-      {/* <SectionTwo />
-      <SectionThree />
-      <SectionFour /> */}
-      <Testimonios />
-      <Contacto />
-      <Footer />
     </main>
   )
 }

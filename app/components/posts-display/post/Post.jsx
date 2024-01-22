@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import logo from './svg/school.svg'
-import linkSvg from './svg/link.svg'
-import { Poppins, Figtree } from 'next/font/google'
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import logo from './svg/school.svg';
+import linkSvg from './svg/link.svg';
+import { Poppins, Figtree } from 'next/font/google';
 
 const figtree = Figtree({ subsets: ['latin'], weight: "300" });
 const poppinsBold = Poppins({ subsets: ['latin'], weight: "400" });

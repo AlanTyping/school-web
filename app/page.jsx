@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import DynamicHeader from "./components/dynamic-header/DynamicHeader";
 import Header from "./components/header/Header";
 import { Poppins } from "next/font/google";
+import PostsApi from "./components/posts-display/PostsApi";
 
 const poppins = Poppins({ subsets: ['latin'], weight: "400" });
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Header />
       <SectionsNav />
       <Presentation />
+      <PostsApi />
       <Course />
       <Identidad />
       {/* <SectionTwo />

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Post } from './post/Post';
-import { api } from '@/app/api';
 import { Figtree } from 'next/font/google';
 
 const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
@@ -10,12 +9,6 @@ const figtree = Figtree({ subsets: ['latin'], weight: "300" });
 
 export const Posts = ({ posts }) => {
   const [postPreview, setPostPreview] = useState(false);
-
-  const handleContainerClick = (event) => {
-    if (event.target.classList.contains('posts-container')) {
-      alert('Clic en el fondo del container');
-    }
-  }
 
   return (
     <div className='bg-[var(--bg)] mb-10 w-full flex justify-center items-center flex-col'>
@@ -27,7 +20,7 @@ export const Posts = ({ posts }) => {
         </div>
       </div> */}
 
-      <div className="w-full flex-row pt-6 flex justify-start relative">
+      {/* <div className="sm:w-[95%] flex-row pt-6 flex justify-start relative">
         <div className="w-full md:w-[50%] flex">
           <div className="md-6 md:ml-8 pt-3 pb-2 rounded-t-lg px-6 flex-center">
             <h2 className={`${figtreeBold.className} text-[1.33rem] md:text-[2rem] text-white`}>Últimos posts</h2>
@@ -38,9 +31,9 @@ export const Posts = ({ posts }) => {
             <button className={`${figtreeBold.className} text-[1.2rem] text-[var(--bg)]`}>Ver más</button>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div  onClick={handleContainerClick} className="w-full posts-container h-[350px] rounded flex py-5 flex-row sm:justify-center items-start overflow-x-scroll overflow-y-hidden lg:overflow-x-hidden">
+      <div className="w-full md:w-[70%] h-auto flex py-14 flex-col sm:justify-center items-center overflow-x-scroll overflow-y-hidden lg:overflow-x-hidden">
         {
           posts.map((post, i) => {
             const { fecha, titulo, descripcion, link, formattedImagen } = post
