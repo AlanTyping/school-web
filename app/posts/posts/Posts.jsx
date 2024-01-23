@@ -23,20 +23,6 @@ export const Posts = ({ posts }) => {
 
   return (
     <div className='bg-[var(--bg)] my-4 w-full flex justify-center items-center flex-col'>
-      <div className="w-full py-5 flex-center text-white">
-        <div className="mx-10">
-          <button className={`py-2 px-4 rounded bg-[#1a3275] ${prevDisabled && 'bg-[#494949]'}`} onClick={() => handlePageChange(currentPage - 1)} disabled={prevDisabled}>Prev</button>
-        </div>
-        <div className="flex-center">
-          <h2 className='text-[1.5rem]'>
-            {currentPage} / { (Math.floor(posts.length / postsPerPage) + 1) }
-          </h2>
-        </div>
-        <div className="mx-10">
-          <button className={`py-2 px-4 rounded bg-[#1a3275] ${nextDisabled && 'bg-[#494949]'}`} onClick={() => handlePageChange(currentPage + 1)} disabled={nextDisabled}>Next</button>
-        </div>
-      </div>
-
       <div className="w-[90%] md:w-[50%] overflow-x-hidden overflow-y-auto h-[700px] flex py-8 flex-col justify-start items-center">
         {
           displayedPosts.map((post, i) => {
@@ -54,6 +40,19 @@ export const Posts = ({ posts }) => {
               />)
           })
         }
+      </div>
+      <div className="w-full py-5 flex-center text-white">
+        <div className="mx-10">
+          <button className={`py-2 px-4 rounded bg-[#1a3275] ${prevDisabled && 'bg-[#494949]'}`} onClick={() => handlePageChange(currentPage - 1)} disabled={prevDisabled}>Prev</button>
+        </div>
+        <div className="flex-center">
+          <h2 className='text-[1.5rem]'>
+            {currentPage} / { (Math.floor(posts.length / postsPerPage) + 1) }
+          </h2>
+        </div>
+        <div className="mx-10">
+          <button className={`py-2 px-4 rounded bg-[#1a3275] ${nextDisabled && 'bg-[#494949]'}`} onClick={() => handlePageChange(currentPage + 1)} disabled={nextDisabled}>Next</button>
+        </div>
       </div>
     </div>
   )
