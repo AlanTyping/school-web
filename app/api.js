@@ -18,6 +18,7 @@ export const api = {
           link
         }
       }))
+      .then((array) => array.reverse())
       .catch(function (error) {
         console.log(error);
       })

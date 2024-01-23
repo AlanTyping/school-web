@@ -15,10 +15,6 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
   return (
     <div className={`cursor-auto mx-5 w-[80%] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
 
-      <div className="">
-        {i}
-      </div>
-
       {
         <div className="w-[90%] flex items-center flex-row">
           <div className="bg-[var(--bg)] h-[50px] w-[50px] rounded-[25px] flex-center">

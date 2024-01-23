@@ -18,20 +18,22 @@ export const Posts = ({ posts }) => {
     setCurrentPage(newPage);
   };
 
+  console.log(Math.floor(posts.length / postsPerPage))
+
 
   return (
     <div className='bg-[var(--bg)] my-4 w-full flex justify-center items-center flex-col'>
       <div className="w-full py-5 flex-center text-white">
-        <div className="m-5">
-          <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Prev</button>
+        <div className="mx-10">
+          <button className='py-2 px-4 rounded bg-[#1a3275]' onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Prev</button>
         </div>
         <div className="flex-center">
           <h2 className='text-[1.5rem]'>
-            {currentPage} / { Math.round(posts.length / postsPerPage) }
+            {currentPage} / { (Math.floor(posts.length / postsPerPage) + 1) }
           </h2>
         </div>
-        <div className="m-5">
-          <button onClick={() => handlePageChange(currentPage + 1)} disabled={indexOfFirstPost >= posts.length - postsPerPage}>Next</button>
+        <div className="mx-10">
+          <button className='py-2 px-4 rounded bg-[#1a3275]' onClick={() => handlePageChange(currentPage + 1)} disabled={indexOfFirstPost >= posts.length - postsPerPage}>Next</button>
         </div>
       </div>
 
