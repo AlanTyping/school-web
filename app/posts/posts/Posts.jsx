@@ -14,18 +14,18 @@ export const Posts = ({ posts }) => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const displayedPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
+  const prevDisabled = currentPage === 1;
+  const nextDisabled = indexOfFirstPost >= posts.length - postsPerPage;
+
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
-
-  console.log(Math.floor(posts.length / postsPerPage))
-
 
   return (
     <div className='bg-[var(--bg)] my-4 w-full flex justify-center items-center flex-col'>
       <div className="w-full py-5 flex-center text-white">
         <div className="mx-10">
-          <button className='py-2 px-4 rounded bg-[#1a3275]' onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Prev</button>
+          <button className={`py-2 px-4 rounded bg-[#1a3275] ${prevDisabled && 'bg-[#494949]'}`} onClick={() => handlePageChange(currentPage - 1)} disabled={prevDisabled}>Prev</button>
         </div>
         <div className="flex-center">
           <h2 className='text-[1.5rem]'>
@@ -33,7 +33,7 @@ export const Posts = ({ posts }) => {
           </h2>
         </div>
         <div className="mx-10">
-          <button className='py-2 px-4 rounded bg-[#1a3275]' onClick={() => handlePageChange(currentPage + 1)} disabled={indexOfFirstPost >= posts.length - postsPerPage}>Next</button>
+          <button className={`py-2 px-4 rounded bg-[#1a3275] ${nextDisabled && 'bg-[#494949]'}`} onClick={() => handlePageChange(currentPage + 1)} disabled={nextDisabled}>Next</button>
         </div>
       </div>
 
