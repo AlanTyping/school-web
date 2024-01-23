@@ -56,7 +56,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
         </div>
 
       
-        {descripcion && <div className={`text-[#ddd] flex w-full mt-3 mb-2 justify-center text-[1rem] ${figtree.className}`}>
+        {descripcion && <div className={`max-h-[300px] overflow-y-auto text-[#ddd] flex w-full mt-3 mb-2 justify-center text-[1rem] ${figtree.className}`}>
           <p>{descripcion}</p>
         </div>}
 
