@@ -4,7 +4,7 @@ import Footer from "../components/footer/Footer";
 
 export default function page() {
   return (
-    <main>
+    <main className="flex flex-col items-center justify-between w-full">
       <PostsApi />
       <Footer />
     </main>

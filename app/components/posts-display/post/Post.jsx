@@ -11,13 +11,14 @@ const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
 
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
+  
   return (
-    <div className={`${i > 2 && 'hidden'} cursor-auto overflow-y-auto mx-5 w-[80%] max-h-[300px] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
+    <div className={`cursor-auto overflow-y-auto mx-5 w-[80%] max-h-[300px] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
 
       {
         <div className="w-[90%] flex items-center flex-row ">
-          <div className="bg-[var(--bg)] h-[50px] w-[50px] rounded-[25px] flex-center">
-            <Image height={30} width={30} className="rounded" alt="" src={logo} />
+          <div className="bg-[var(--bg)] h-[45px] w-[45px] rounded-[25px] flex-center">
+            <Image height={25} width={25} className="rounded" alt="" src={logo} />
           </div>
           <div className={`ml-[10px] text-[1.2rem] ${poppinsBold.className}`}>
             <h1>Colegio Trinity</h1>
@@ -44,7 +45,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
 
       <div className="w-[80%] flex flex-col flex-center">
         <div className="flex flex-col-reverse flex-center w-full">
-          {imagen && <div className="relative h-[160px] sm:h-[200px] w-full mt-1 mb-1">
+          {imagen && <div className="relative h-[160px] sm:h-[170px] w-full mt-3">
             <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className="rounded" alt="" src={imagen} />
           </div>}
 
@@ -54,16 +55,16 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
         </div>
 
 
-        {descripcion && <div className={`text-[#ddd] flex w-full mt-3 justify-center text-[1rem] ${figtree.className}`}>
+        {descripcion && <div className={`text-[#ddd] flex w-full mt-3 mb-2 justify-center text-[1rem] ${figtree.className}`}>
           <p>{descripcion}</p>
         </div>}
 
         {link && <div className={`text-[0.85rem] mt-5 w-[97%] flex justify-start`}>
-          <Link className='flex bg-[var(--bg)] rounded p-1 pr-4 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />{link}</Link>
+          <Link className='flex bg-[var(--bg)] rounded p-1 pr-4 mb-2 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />{link}</Link>
         </div>}
 
 
-        {fecha && <div className="justify-end mt-4 flex text-[#ccc] text-[1rem] w-[97%]">
+        {fecha && <div className="justify-end mt-2 flex text-[#ccc] text-[1rem] w-[97%]">
           <p className={`${figtree.className}`}>{fecha}</p>
         </div>}
 

@@ -23,12 +23,12 @@ export default function PostsDisplay ({ posts }) {
 
       <div className="w-full sm:w-[95%] flex-row pt-6 flex justify-start relative">
         <div className="w-full md:w-[50%] flex">
-          <div className="md-6 md:ml-8 pt-3 pb-2 rounded-t-lg px-6 flex-center">
+          <div className="md-6 ml-4 md:ml-8 pt-3 pb-2 rounded-t-lg px-6 flex-center">
             <h2 className={`${figtreeBold.className} text-[1.33rem] md:text-[2rem] text-white`}>Últimos posts</h2>
           </div>
         </div>
-        <div className="w-full md:w-[50%] flex justify-end items-center">
-          <div className="pt-2 pb-1 rounded bg-white px-4 md:px-6 flex justify-center mr-6 md:mr-36">
+        <div className="w-full md:w-[50%] flex justify-center md:justify-end items-center">
+          <div className="pt-2 pb-1 rounded bg-white px-4 md:px-6 flex justify-center mr-8 md:mr-36">
             <Link href={'/posts'} className={`${figtreeBold.className} text-[1.2rem] text-[var(--bg)]`}>Ver más</Link>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function PostsDisplay ({ posts }) {
       <div className="w-full md:w-[90%] posts-container h-[350px] rounded flex py-5 flex-row  items-start overflow-x-scroll overflow-y-hidden lg:overflow-x-hidden">
         {
           posts.map((post, i) => {
-            const { fecha, titulo, descripcion, link, formattedImagen } = post
+            const { fecha, titulo, descripcion, link, formattedImage } = post
 
             return (
               <Post
@@ -47,7 +47,7 @@ export default function PostsDisplay ({ posts }) {
                 titulo={titulo}
                 descripcion={descripcion}
                 link={link}
-                imagen={formattedImagen}
+                imagen={formattedImage}
               />)
           })
         }

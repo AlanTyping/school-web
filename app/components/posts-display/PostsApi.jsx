@@ -3,7 +3,8 @@ import { api } from '@/app/api';
 import PostsDisplay from './PostsDisplay';
 
 export default async function PostsApi () {
-  const posts = await api.posts();
+  const posts = await api.posts()
+  const displayPosts = posts.slice(0, 3);
 
-  return <PostsDisplay posts={posts} />
+  return <PostsDisplay posts={displayPosts} />
 }

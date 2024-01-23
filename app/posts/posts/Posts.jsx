@@ -8,14 +8,37 @@ const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
 const figtree = Figtree({ subsets: ['latin'], weight: "300" });
 
 export const Posts = ({ posts }) => {
-  const [postPreview, setPostPreview] = useState(false);
+  const postsPerPage = 7;
+  const [currentPage, setCurrentPage] = useState(1);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const displayedPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
+
 
   return (
-    <div className='bg-[var(--bg)] mb-10 w-full flex justify-center items-center flex-col'>
-      <div className="w-full md:w-[70%] h-auto flex py-14 flex-col sm:justify-center items-center overflow-x-scroll overflow-y-hidden lg:overflow-x-hidden">
+    <div className='bg-[var(--bg)] my-4 w-full flex justify-center items-center flex-col'>
+      <div className="w-full py-5 flex-center text-white">
+        <div className="m-5">
+          <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Prev</button>
+        </div>
+        <div className="flex-center">
+          <h2 className='text-[1.5rem]'>
+            {currentPage} / { Math.round(posts.length / postsPerPage) }
+          </h2>
+        </div>
+        <div className="m-5">
+          <button onClick={() => handlePageChange(currentPage + 1)} disabled={indexOfFirstPost >= posts.length - postsPerPage}>Next</button>
+        </div>
+      </div>
+
+      <div className="w-[90%] md:w-[50%] overflow-y-auto h-[700px] flex py-8 flex-col justify-start items-center overflow-x-scroll lg:overflow-x-hidden">
         {
-          posts.map((post, i) => {
-            const { fecha, titulo, descripcion, link, formattedImagen } = post
+          displayedPosts.map((post, i) => {
+            const { fecha, titulo, descripcion, formattedImage, link } = post
 
             return (
               <Post
@@ -25,7 +48,7 @@ export const Posts = ({ posts }) => {
                 titulo={titulo}
                 descripcion={descripcion}
                 link={link}
-                imagen={formattedImagen}
+                imagen={formattedImage}
               />)
           })
         }
