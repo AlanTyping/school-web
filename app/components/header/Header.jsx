@@ -2,9 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import Nav from './nav/Nav';
-import logo from './student.svg';
-import logoWhite from './student-white.svg';
+import logo from './assets/student.svg';
+import logoWhite from './assets/student-white.svg';
 
 const Header = () => {
   return (
