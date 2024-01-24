@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from './svg/school.svg';
@@ -11,7 +10,6 @@ const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
 
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
-  
   return (
     <div className={`cursor-auto overflow-y-auto mx-5 w-[80%] max-h-[300px] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
 
@@ -45,8 +43,8 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
 
       <div className="w-[80%] flex flex-col flex-center">
         <div className="flex flex-col-reverse flex-center w-full">
-          {imagen && <div className="relative h-[160px] sm:h-[170px] w-full mt-3">
-            <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className="rounded" alt="" src={imagen} />
+          {imagen && <div className="relative h-[160px] sm:h-[180px] w-full mt-3">
+            <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className={`cursor-pointer rounded`} alt="" src={imagen} />
           </div>}
 
           {titulo && <div className={`text-[1.5rem] text-[#eee] mt-4 flex w-full ${figtreeBold.className}`}>
@@ -59,7 +57,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
           <p>{descripcion}</p>
         </div>}
 
-        {link && <div className={`text-[0.85rem] mt-5 w-[97%] flex justify-start`}>
+        {link.length > 5 && <div className={`text-[0.85rem] mt-5 w-[97%] flex justify-start`}>
           <Link className='flex bg-[var(--bg)] rounded p-1 pr-4 mb-2 flex-row items-center' href={link} target="blank"><Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />{link}</Link>
         </div>}
 

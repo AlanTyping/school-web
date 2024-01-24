@@ -4,7 +4,7 @@ import Image from 'next/image';
 import logo from './svg/school.svg';
 import linkSvg from './svg/link.svg';
 import { Poppins, Figtree } from 'next/font/google';
-
+import BigImage from '@/app/components/bigImage/BigImage';
 
 const figtree = Figtree({ subsets: ['latin'], weight: "300" });
 const poppinsBold = Poppins({ subsets: ['latin'], weight: "400" });
@@ -33,15 +33,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
             <Image onClick={() => setBigImage(true)} className={`cursor-pointer rounded`} style={{ objectFit: "contain" }} quality={65} fill={true} sizes='30vw' alt="" src={imagen} />
           </div>}
 
-          {bigImage && <div className="absolute flex-start z-[2] inset-0 bg-[rgba(0,0,0,0.5)]" >
-            <div className="flex-center w-full h-[100vh]">
-              <div className="h-[60%] w-full relative flex-center">
-                <button className='absolute top-0 right-10 z-10' onClick={() => setBigImage(false)}>Cerrar</button>
-                <Image className={`cursor-pointer rounded`} style={{ objectFit: "contain" }} quality={100} fill={true} sizes='30vw' alt="" src={imagen} />
-              </div>
-            </div>
-
-          </div >}
+          <BigImage img={imagen} bigImage={bigImage} setBigImage={setBigImage} />
 
           {titulo && <div className={`text-[1.5rem] text-[#eee] mt-4 flex w-full ${figtreeBold.className}`}>
             <h1>{titulo}</h1>
