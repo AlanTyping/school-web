@@ -8,7 +8,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: "400" });
 export default function page() {
 
   return (
-    <main className={`flex flex-col items-center justify-between w-full ${poppins.className}`}>
+    <main className={`flex relative flex-col items-center justify-between w-full ${poppins.className}`}>
       <PagesHeader />
       <PostsApi />
       <Footer />
