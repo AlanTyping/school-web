@@ -18,11 +18,25 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
     <div className={`cursor-auto mx-5 w-[80%] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
       {
         <div className="w-[90%] flex items-center flex-row">
-          <div className="bg-[var(--bg)] h-[50px] w-[50px] rounded-[25px] flex-center">
-            <Image height={30} width={30} className="rounded" alt="" src={logo} />
+          
+          <div className="w-[70%] flex items-center flex-row">
+            <div className="bg-[var(--bg)] h-[45px] w-[45px] rounded-[25px] flex-center">
+              <Image height={25} width={25} className="rounded" alt="" src={logo} />
+            </div>
+            <div className={`ml-[10px] text-[1.15rem] ${poppinsBold.className}`}>
+              <h1>Colegio Trinity</h1>
+            </div>
           </div>
-          <div className={`ml-[10px] text-[1.2rem] ${poppinsBold.className}`}>
-            <h1>Colegio Trinity</h1>
+
+          <div className="w-[30%] flex-center">
+            <div className="bg-[#021321] flex-center flex-row rounded py-1 pr-2 pl-1 relative">
+              <div className="flex-center w-[20px]">
+                <div className="h-[10px] rounded-[50%] w-[10px] border-orange-500 border-[2px]" />
+              </div>
+              <div className="relative flex-center">
+                <span className={`text-[0.75rem] ${figtreeBold.className}`}>proyecto</span>
+              </div>
+            </div>
           </div>
         </div>
       }

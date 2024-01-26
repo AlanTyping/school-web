@@ -44,7 +44,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
       <div className="w-[80%] flex flex-col flex-center">
         <div className="flex flex-col-reverse flex-center w-full">
           {imagen && <div className="relative h-[160px] sm:h-[180px] w-full mt-3">
-            <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className={`cursor-pointer`} alt="" src={imagen} />
+            <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' alt="" src={imagen} />
           </div>}
 
           {titulo && <div className={`text-[1.5rem] text-[#eee] mt-4 flex w-full ${figtreeBold.className}`}>
