@@ -11,7 +11,7 @@ const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
   return (
-    <div className={`cursor-auto overflow-y-auto mx-5 w-[80%] max-h-[300px] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
+    <div className={`cursor-auto overflow-y-auto mx-5 w-[80%] max-h-[300px] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[rgb(26,50,117)] my-5 rounded`}>
 
       {
         <div className="w-[90%] flex items-center flex-row ">
@@ -44,7 +44,7 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, i }) => {
       <div className="w-[80%] flex flex-col flex-center">
         <div className="flex flex-col-reverse flex-center w-full">
           {imagen && <div className="relative h-[160px] sm:h-[180px] w-full mt-3">
-            <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className={`cursor-pointer rounded`} alt="" src={imagen} />
+            <Image style={{ objectFit: "contain" }} quality={65} fill={true} sizes='50vw' className={`cursor-pointer`} alt="" src={imagen} />
           </div>}
 
           {titulo && <div className={`text-[1.5rem] text-[#eee] mt-4 flex w-full ${figtreeBold.className}`}>

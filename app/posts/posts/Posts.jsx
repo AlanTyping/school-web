@@ -23,10 +23,10 @@ export const Posts = ({ posts }) => {
 
   return (
     <div className='bg-[var(--bg)] my-2 w-full flex justify-center items-center flex-col'>
-      <div className="w-[90%] md:w-[50%] overflow-x-hidden overflow-y-auto h-[600px] flex py-8 flex-col justify-start items-center">
+      <div className="w-[90%] md:w-[50%] overflow-x-hidden overflow-y-auto h-[600px] 2xl:h-[900px] flex py-8 flex-col justify-start items-center">
         {
           displayedPosts.map((post, i) => {
-            const { fecha, titulo, descripcion, formattedImage, link } = post
+            const { fecha, titulo, descripcion, formattedImage, link } = post;
 
             return (
               <Post
