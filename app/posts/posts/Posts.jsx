@@ -26,7 +26,7 @@ export const Posts = ({ posts }) => {
       <div className="w-[90%] md:w-[50%] overflow-x-hidden overflow-y-auto h-[600px] 2xl:h-[900px] flex py-8 flex-col justify-start items-center">
         {
           displayedPosts.map((post, i) => {
-            const { fecha, titulo, descripcion, formattedImage, link } = post;
+            const { fecha, titulo, descripcion, formattedImage, link, categoria } = post;
 
             return (
               <Post
@@ -37,6 +37,7 @@ export const Posts = ({ posts }) => {
                 descripcion={descripcion}
                 link={link}
                 imagen={formattedImage}
+                categoria={categoria}
               />)
           })
         }

@@ -6,16 +6,17 @@ export const api = {
     { next: { tags: ["posts"]} })
     .then((jiji) => jiji.text())
       .then((data) => data.split('\n').slice(1).map((row) => {
-        const [fecha, titulo, descripcion, imagen, link] = row.split('\t');
+        const [fecha, titulo, descripcion, imagen, link, categori] = row.split('\t');
         const formattedImage = imagen.replace(/\\/g, '/').trim();
-
+        const categoria = categori.replace(/\s/g, '')
 
         return {
           fecha,
           titulo,
           descripcion,
           formattedImage,
-          link
+          link,
+          categoria
         }
       }))
       .then((array) => array.reverse())
