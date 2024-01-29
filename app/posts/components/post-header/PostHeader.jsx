@@ -20,11 +20,10 @@ export default function PostHeader({ categoria }) {
           <div className="bg-[#021321] flex-center flex-row rounded py-1 pr-2 pl-1 relative">
             <div className="flex-center w-[20px]">
               <div className={`
-              ${categoria === 'proyectos' && 'bg-[#492e08] border-[#f08c00]'}
-              ${categoria === 'comunicado' && 'bg-[#154a7b] border-[#a5d8ff]'}
-              ${categoria === 'evento' && 'bg-[#460c4b] border-[#f7a5ff]'}
-              h-[10px] rounded-[50%] w-[10px]  border-[2px]
-              `} />
+              ${categoria === 'proyectos' ? 'bg-[#492e08] border-[#f08c00]'
+              : categoria === 'comunicado' ? 'bg-[#154a7b] border-[#a5d8ff]'
+              : categoria === 'evento' && 'bg-[#460c4b] border-[#f7a5ff]'}
+              h-[10px] rounded-[50%] w-[10px]  border-[2px]`} />
             </div>
             <div className="relative flex-center">
               <span className={`text-[0.75rem] ${figtreeBold.className}`}>{categoria}</span>
