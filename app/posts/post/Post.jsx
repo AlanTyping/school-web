@@ -9,7 +9,6 @@ import { figtreeBold, figtree } from '@/app/fonts/fonts';
 export const Post = ({ fecha, titulo, descripcion, link, imagen, categoria, i }) => {
   const [bigImage, setBigImage] = useState(false);
   
-  if (fecha) {
     return (
     <div className={`cursor-auto mx-5 w-[80%] flex flex-col max-w-[400px] pb-4 pt-6 min-w-[325px] items-center text-white bg-[#1a3275] my-5 rounded`}>
       <PostHeader categoria={categoria} />
@@ -45,7 +44,6 @@ export const Post = ({ fecha, titulo, descripcion, link, imagen, categoria, i })
       </div>
     </div>
   )
-  }
 }
 
 
