@@ -9,9 +9,5 @@ export async function GET() {
   noStore()
   revalidateTag("posts");
 
-  return NextResponse.json({revalidated: true}, {
-    headers: {
-      'Cache-Control': 'no-store'
-    }
-  });
+  return NextResponse.json({revalidated: true});
 };
