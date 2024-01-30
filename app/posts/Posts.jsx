@@ -3,26 +3,37 @@
 import { useState } from 'react';
 import { Post } from './post/Post';
 import { Figtree } from 'next/font/google';
+import Filter from './components/post-header/filter/Filter';
 
 const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
 const figtree = Figtree({ subsets: ['latin'], weight: "300" });
 
 export const Posts = ({ posts }) => {
+  const [filteredPosts, setFilteredPosts] = useState(posts);
   const postsPerPage = 7;
   const [currentPage, setCurrentPage] = useState(1);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const displayedPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+  const displayedPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
 
   const prevDisabled = currentPage === 1;
-  const nextDisabled = indexOfFirstPost >= posts.length - postsPerPage;
+  const nextDisabled = indexOfFirstPost >= filteredPosts.length - postsPerPage;
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
 
+  const filterPosts = (categoria) => {
+    if (categoria) return setFilteredPosts(posts.filter(e => e.categoria === categoria)) ;
+
+    return 
+  }
+
+
   return (
     <div className='bg-[var(--bg)] my-2 w-full flex justify-center items-center flex-col'>
+      <Filter filterPosts={filterPosts} />
+
       <div className="w-[90%] md:w-[50%] overflow-x-hidden overflow-y-auto h-[600px] 2xl:h-[900px] flex flex-col justify-start items-center">
         {
           displayedPosts.map((post, i) => {
@@ -49,7 +60,7 @@ export const Posts = ({ posts }) => {
         </div>
         <div className="flex-center">
           <h2 className='text-[1.3rem]'>
-            {currentPage} / { (Math.floor(posts.length / postsPerPage) + 1) }
+            {currentPage} / { (Math.floor(displayedPosts.length / postsPerPage) + 1) }
           </h2>
         </div>
         <div className="mx-10">
