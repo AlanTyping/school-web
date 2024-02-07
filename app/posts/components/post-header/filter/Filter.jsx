@@ -38,7 +38,6 @@ export default function Filter({ filterPosts }) {
                     <span className={`text-[0.95rem] ${figtreeBold.className}`}>{categoria}</span>
                   </div>
                 </button>
-                
               ))}
             </div>}
         </div>
