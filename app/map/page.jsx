@@ -33,4 +33,4 @@ function Page() {
   )
 };
 
-export default memo(page)
+export default memo(Page)
