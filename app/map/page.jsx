@@ -13,10 +13,6 @@ const center = {
   lng: -38.523
 };
 
-const map_key = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-
-console.log(map_key)
-
 function page() {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
