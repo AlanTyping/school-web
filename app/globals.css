@@ -41,6 +41,14 @@ img {
     align-items: center;
 }
 
+.w {
+    width: 100%;
+}
+
+.h {
+    height: 100%;
+}
+
 @media (width > 1436px) {
 
     p,
