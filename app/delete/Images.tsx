@@ -20,7 +20,7 @@ const Images: FC<ImagesProps> = (props) => {
   };
 
   return (
-    <div className='images-container max-w-[95%] md:max-w-[1200px]'>
+    <div className='images-container w-[95%] md:max-w-[1200px]'>
       {data.map((slide, index) => (
         <div
           onClick={() => handleClickImage(index)}
