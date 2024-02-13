@@ -1,5 +1,5 @@
 import React from 'react'
-import { api } from '@/app/api/api';
+import { api } from '../api/api';
 import { Posts } from './Posts';
 import { unstable_noStore as noStore } from 'next/cache';
 

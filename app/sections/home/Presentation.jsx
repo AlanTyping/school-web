@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import school from './assets/fiumba.svg';
 import { Carousel } from './carousel/Carousel';
-import { GuideNav } from '@/app/components/guide-nav/GuideNav';
+import { GuideNav } from '../../../app/components/guide-nav/GuideNav';
 import arrow from './assets/blue-arrow.svg';
 
 
