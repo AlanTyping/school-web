@@ -1,5 +1,9 @@
 // 'use client'
 
+export default function JEJE () {
+  return <></>
+}
+
 // import { useState } from 'react';
 // import Lightbox from 'yet-another-react-lightbox';
 // import { slides } from './data';
