@@ -1,4 +1,4 @@
-import { figtreem, poppinsBold, figtreeBold } from '@/app/fonts/fonts';
+import { figtreem, poppinsBold, figtreeBold } from '../../../../app/fonts/fonts';
 import Image from 'next/image';
 import logo from './svg/school.svg'
 

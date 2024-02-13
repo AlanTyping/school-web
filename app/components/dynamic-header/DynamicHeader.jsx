@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import logo from './school-logo.png'
 import './dynamicHeader.css';
-import { scrollStorage } from '@/zustand/scrollStorage';
+import { scrollStorage } from '../../../zustand/scrollStorage';
 
 const DynamicHeader = () => {
   const [hidden, setHidden] = useState(true);

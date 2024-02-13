@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { scrollStorage } from '@/zustand/scrollStorage';
+import { scrollStorage } from '../../../zustand/scrollStorage';
 import Li from './Li';
 import school from './assets/school.svg';
 import culture from './assets/culture.svg';
