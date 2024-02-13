@@ -42,11 +42,11 @@ img {
 }
 
 .w {
-    width: 100%;
+    min-width: 100%;
 }
 
 .h {
-    height: 100%;
+    min-height: 100vh;
 }
 
 @media (width > 1436px) {
