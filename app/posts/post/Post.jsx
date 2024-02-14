@@ -2,9 +2,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import linkSvg from './svg/link.svg';
-import BigImage from '@/app/components/bigImage/BigImage';
+import BigImage from '../components/bigImage/BigImage';
 import PostHeader from '../components/post-header/PostHeader';
-import { figtreeBold, figtree } from '@/app/fonts/fonts';
+import { figtreeBold, figtree } from '../../fonts/fonts';
 
 export const Post = ({ fecha, titulo, descripcion, link, imagen, categoria, i }) => {
   const [bigImage, setBigImage] = useState(false);
