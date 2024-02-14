@@ -14,7 +14,7 @@ import {
 } from 'yet-another-react-lightbox/plugins';
 import Images from "./Images";
 
-export default function page() {
+export default function Page() {
   const [index, setIndex] = useState<number>(-1);
 
   return (
