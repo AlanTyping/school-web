@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import linkSvg from './svg/link.svg';
-import BigImage from '../components/bigImage/BigImage';
+import BigImage from '../../components/bigImage/BigImage';
 import PostHeader from '../components/post-header/PostHeader';
 import { figtreeBold, figtree } from '../../fonts/fonts';
 
