@@ -2,6 +2,7 @@
 
 import { FC } from 'react';
 import './index.css'
+import Image from "next/image";
 
 interface ImagesProps {
   data: {
@@ -27,7 +28,7 @@ const Images: FC<ImagesProps> = (props) => {
           key={index}
           className='image'
         >
-          <img src={slide.src} alt={slide.description} />
+          <Image width={390} height={320}  src={slide.src} alt={slide.description} />
         </div>
       ))}
     </div>
