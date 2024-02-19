@@ -7,7 +7,8 @@ export const dynamic = 'force-dynamic'
 
 export async function GET() {
   noStore()
-  revalidateTag("posts");
+  revalidateTag(["posts"]);
+  revalidateTag(["eventos"]);
 
   return NextResponse.json({revalidated: true});
 };
