@@ -53,7 +53,6 @@ const Calendar = ({ eventos }) => {
   }
 
 
-
   const prevMonth = () => {
     setCurrentDate(prev => addMonths(prev, -1));
   };
@@ -92,8 +91,8 @@ const Calendar = ({ eventos }) => {
                 <h4>{formatedDate}</h4>
               </div>
               <div className="w h-[300px] overflow-y-auto event-container overflow-x-hidden">
-                {currentEvents.map(({ titulo, fecha }) => (
-                  <div className="w-[90%] h-[100px] flex flex-col items-start m-2 p-2 text-[0.95rem]">
+                {currentEvents.map(({ titulo, fecha }, i: number) => (
+                  <div key={i} className="w-[90%] h-[100px] flex flex-col items-start m-2 p-2 text-[0.95rem]">
                     <span>20:00hs - 21:00hs</span>
                     <span>{fecha}</span>
                     <button className='font-bold text-[1.1rem]'>{titulo}</button>

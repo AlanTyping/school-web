@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState } from 'react'
 import { isSameMonth, format, isSameDay, daysToWeeks} from 'date-fns'
 
@@ -10,8 +8,7 @@ export default function Day({ day, monthStart, currentDate, eventos, selectedDat
     year: 'numeric'
   });
 
-  const bg = eventos.some((e: any) => e.fecha === fechaFormateada)
-
+  const bg = eventos.some((e: any) => e.fecha === fechaFormateada);
 
   return (
     <div
