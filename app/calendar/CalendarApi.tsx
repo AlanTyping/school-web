@@ -6,6 +6,7 @@ import Calendar from './Calendar';
 export default async function CalendarApi () {
   noStore()
   const eventos = await api.eventos();
-  
-  return <Calendar eventos={eventos} />
+  const posts = await api.posts();
+
+  return <Calendar eventos={eventos} posts={posts} />
 };

@@ -57,3 +57,18 @@ img {
         font-size: 1.35rem;
     }
 }
+
+.event-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.event-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.691);
+}

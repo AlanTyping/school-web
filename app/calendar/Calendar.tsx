@@ -4,8 +4,10 @@ import React, { useState, useEffect } from 'react';
 import Day from './components/Day';
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, addMonths, isSameYear } from 'date-fns';
 import './calendar.css'
+import Evento from './components/Evento';
 
-const Calendar = ({ eventos }) => {
+const Calendar = ({ eventos, posts }) => {
+  const [eventosDefinitivos, setEventosDefinitivos] = useState([]);
   const [currentDate, setCurrentDate] = useState<Date>(new Date());
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [formatedDate, setFormatedDate] = useState<string>('')
@@ -16,21 +18,64 @@ const Calendar = ({ eventos }) => {
   const startDate = startOfWeek(monthStart);
   const endDate = endOfWeek(monthEnd);
 
-
   const rows = [];
   let days = [];
   let day = startDate;
 
-  useEffect(() => {
-    const fechaFormateada = selectedDate.toLocaleDateString('es-ES', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric'
-    });
+  const fechaFormateada = selectedDate.toLocaleDateString('es-ES', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
 
-    setCurrentEvents(eventos.filter((e: any) => e.fecha === fechaFormateada));
+  const compararFechas = (a: any, b: any) => {
+    // Convertir las fechas al formato 'yyyy/mm/dd' para compararlas
+
+    let fechaA = new Date(a.fecha.split('/').reverse().join('/'));
+    let fechaB = new Date(b.fecha.split('/').reverse().join('/'));
+    
+    // Comparar las fechas
+    if (fechaA < fechaB) {
+      return -1;
+    }
+    if (fechaA > fechaB) {
+      return 1;
+    }
+    return 0;
+  };
+
+  useEffect(() => {
+    const calendarPosts = posts.filter((e: any) => e.enCalendario === 'si');
+    const eventosFusionados = [...eventos, ...calendarPosts].sort(compararFechas);
+    const prueba = eventosFusionados.map((e: any, i: number) => {
+      if (e.fecha === fechaFormateada) {
+        return {
+          ...e,
+          i: i
+        }
+      }
+      return undefined;
+    }).filter((element) => element !== undefined);
+
+    setCurrentEvents(prueba)
+    setEventosDefinitivos(eventosFusionados);
+  }, [])
+
+  useEffect(() => {
+    if (eventosDefinitivos.length !== 0) {
+      setCurrentEvents(eventosDefinitivos.map((e: any, i: number) => {
+        if (e.fecha === fechaFormateada) {
+          return {
+            ...e,
+            i: i
+          }
+        }
+        return undefined;
+      }).filter((element) => element !== undefined));
+    }
+
     setFormatedDate(fechaFormateada);
-  }, [selectedDate])
+  }, [selectedDate]);
 
   function getYears(array: any[]) {
     return array.reduce((acc, e) => {
@@ -91,14 +136,7 @@ const Calendar = ({ eventos }) => {
                 <h4>{formatedDate}</h4>
               </div>
               <div className="w h-[300px] overflow-y-auto event-container overflow-x-hidden">
-                {currentEvents.map(({ titulo, fecha }, i: number) => (
-                  <div key={i} className="w-[90%] h-[100px] flex flex-col items-start m-2 p-2 text-[0.95rem]">
-                    <span>20:00hs - 21:00hs</span>
-                    <span>{fecha}</span>
-                    <button className='font-bold text-[1.1rem]'>{titulo}</button>
-                  </div>
-                ))}
-
+                {currentEvents.map(({ titulo, fecha, descripcion, i }) => <Evento i={i} eventos={eventosDefinitivos} descripcion={descripcion} fecha={fecha} titulo={titulo} key={i} />)}
               </div>
             </div>
           </div>
