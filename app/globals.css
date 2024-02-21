@@ -65,8 +65,9 @@ img {
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     width: 500px;
+    height: 500px;
 }
 
 .event-modal::backdrop {
