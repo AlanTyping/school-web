@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Day from "../day/Day";
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, addMonths, isSameYear } from 'date-fns';
+import '../../calendar.css'
 
 export default function Dates({ eventos, selectedDate, setSelectedDate, setFormatedDate, setCurrentEvents}) {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -40,7 +41,7 @@ export default function Dates({ eventos, selectedDate, setSelectedDate, setForma
     }
 
     setFormatedDate(fechaFormateada);
-  }, [selectedDate]);
+  }, [selectedDate, eventos]);
 
   const prevMonth = () => {
     setCurrentDate(prev => addMonths(prev, -1));

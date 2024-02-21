@@ -7,10 +7,9 @@ export const api = {
       next: { tags: ['posts']}})
     .then((data) => data.text())
       .then((data) => data.split('\n').slice(1).map((row) => {
-        const [fecha, titulo, descripcion, imagen, link, categori, inCalendario] = row.split('\t');
+        const [fecha, titulo, descripcion, imagen, link, categori] = row.split('\t');
         const formattedImage = imagen.replace(/\\/g, '/').trim();
         const categoria = categori.replace(/\s/g, '')
-        const enCalendario = inCalendario.trim()
 
         return {
           fecha,
@@ -19,7 +18,6 @@ export const api = {
           formattedImage,
           link,
           categoria,
-          enCalendario
         }
       }))
       .then((array) => array.reverse())

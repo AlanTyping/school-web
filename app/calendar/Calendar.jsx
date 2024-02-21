@@ -5,12 +5,14 @@ import { useState, useEffect } from 'react';
 import Dates from './components/dates/Dates';
 import Eventos from './components/eventos/Eventos';
 import CalendarHeader from './components/calendar-header/CalendarHeader';
+import Filter from '../components/filter/Filter';
 
 const Calendar = ({ eventosProp }) => {
   const [eventos, setEventos] = useState([]);
   const [formatedDate, setFormatedDate] = useState('');
   const [currentEvents, setCurrentEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [eventosFiltrados, setEventosFiltrados] = useState([]);
 
   const compararFechas = (a, b) => {
     // Convertir las fechas al formato 'yyyy/mm/dd' para compararlas
@@ -39,7 +41,7 @@ const Calendar = ({ eventosProp }) => {
     // al renderizar el componente
     const eventosOrdenados = eventosProp.sort(compararFechas);
     setEventos(eventosOrdenados);
-
+    setEventosFiltrados(eventosOrdenados);
 
     //setear si hay, las eventos que coincidan
     //con la fecha seleccionada
@@ -60,15 +62,31 @@ const Calendar = ({ eventosProp }) => {
     }, [])
   }
 
+  const categorias = [{
+    categoria: 'proyectos',
+    color: '#492e08',
+    borde: '#f08c00'
+  }, {
+    categoria: 'comunicado',
+    color: '#154a7b',
+    borde: '#a5d8ff'
+  }, {
+    categoria: 'eventos',
+    color: '#460c4b',
+    borde: '#f7a5ff'
+  },];
+
   return (
     <div className="bg-white h w flex flex-col items-center">
       <div className="w flex-center">
         <div className="w-[90%] md:w-[80%] flex flex-col">
-          <CalendarHeader />
+          <CalendarHeader>
+            <Filter categorias={categorias} elements={eventos} setFilteredElements={setEventosFiltrados} />
+          </CalendarHeader>
 
           <div className="w flex flex-col md:flex-row items-center">
-            <Dates eventos={eventos} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
-            <Eventos formatedDate={formatedDate} eventos={eventos} currentEvents={currentEvents} />
+            <Dates eventos={eventosFiltrados} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
+            <Eventos formatedDate={formatedDate} eventos={eventosFiltrados} currentEvents={currentEvents} />
           </div>
         </div>
       </div>

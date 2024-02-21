@@ -3,15 +3,15 @@
 import { useState } from 'react';
 import { Post } from './post/Post';
 import { Figtree } from 'next/font/google';
-import Filter from './components/post-header/filter/Filter';
+import Filter from '../components/filter/Filter';
 
 const figtreeBold = Figtree({ subsets: ['latin'], weight: "500" });
 const figtree = Figtree({ subsets: ['latin'], weight: "300" });
 
 export const Posts = ({ posts }) => {
   const [filteredPosts, setFilteredPosts] = useState(posts);
-  const postsPerPage = 7;
   const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 7;
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const displayedPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
@@ -23,16 +23,24 @@ export const Posts = ({ posts }) => {
     setCurrentPage(newPage);
   };
 
-  const filterPosts = (categoria) => {
-    if (categoria) return setFilteredPosts(posts.filter(e => e.categoria === categoria)) ;
-
-    return 
-  }
+  const categorias = [{
+    categoria: 'proyectos',
+    color: '#492e08',
+    borde: '#f08c00'
+  }, {
+    categoria: 'comunicado',
+    color: '#154a7b',
+    borde: '#a5d8ff'
+  }, {
+    categoria: 'eventos',
+    color: '#460c4b',
+    borde: '#f7a5ff'
+  },];
 
 
   return (
     <div className='bg-[var(--bg)] my-2 w-full flex justify-center items-center flex-col'>
-      <Filter filterPosts={filterPosts} />
+      <Filter setFilteredElements={setFilteredPosts} elements={posts} categorias={categorias} />
 
       <div className="w-[90%] md:w-[50%] overflow-x-hidden overflow-y-auto h-[600px] 2xl:h-[900px] flex flex-col justify-start items-center">
         {
