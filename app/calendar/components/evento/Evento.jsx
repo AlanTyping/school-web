@@ -1,5 +1,6 @@
 'use client'
 
+
 import { useRef, useState } from 'react';
 import FullEvento from '../full-evento/FullEvento';
 
@@ -11,7 +12,7 @@ export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, ev
     dialogRef.current.showModal();
     setIsOpen(true)
   };
-//
+
   const closeDialog = () => {
     setIsOpen(false)
     dialogRef.current.close();

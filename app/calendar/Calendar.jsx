@@ -74,20 +74,22 @@ const Calendar = ({ eventosProp }) => {
     categoria: 'eventos',
     color: '#460c4b',
     borde: '#f7a5ff'
-  },];
+  }, {
+    categoria: 'dia sin clases',
+    color: '#460c4b',
+    borde: '#f7a5ff'
+  }];
 
   return (
     <div className="bg-white h min-h-[700px] w flex flex-col items-center">
-      <div className="w flex-center">
-        <div className="w-[90%] md:w-[80%] flex flex-col">
-          <CalendarHeader>
-            <Filter categorias={categorias} elements={eventos} setFilteredElements={setEventosFiltrados} />
-          </CalendarHeader>
+      <div className="w-[90%] md:w-[80%] flex flex-col mt-6">
+        <CalendarHeader>
+          <Filter backgroundBg={'bg-[var(--lightContrast)]'} itemBg={''} categorias={categorias} elements={eventos} setFilteredElements={setEventosFiltrados} />
+        </CalendarHeader>
 
-          <div className="w flex flex-col md:flex-row items-center">
-            <Dates eventos={eventosFiltrados} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
-            <Eventos formatedDate={formatedDate} eventos={eventosFiltrados} currentEvents={currentEvents} />
-          </div>
+        <div className="w flex flex-col md:flex-row items-center">
+          <Dates eventos={eventosFiltrados} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
+          <Eventos formatedDate={formatedDate} eventos={eventosFiltrados} currentEvents={currentEvents} />
         </div>
       </div>
     </div>

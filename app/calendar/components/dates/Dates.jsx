@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import Day from "../day/Day";
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, addMonths, isSameYear } from 'date-fns';
+import { poppinsBold, figtreeBold } from '../../../fonts/fonts'
 import '../../calendar.css'
 
 export default function Dates({ eventos, selectedDate, setSelectedDate, setFormatedDate, setCurrentEvents}) {
+  const [todaysDate, setTodaysDate] = useState(new Date());
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const monthStart = startOfMonth(currentDate);
@@ -25,7 +27,7 @@ export default function Dates({ eventos, selectedDate, setSelectedDate, setForma
 
   while (day <= endDate) {
     for (let i = 0; i < 7; i++) {
-      days.push(<Day eventos={eventos} day={day} selectedDate={selectedDate} setSelectedDate={setSelectedDate} currentDate={currentDate} monthStart={monthStart} key={i} />);
+      days.push(<Day eventos={eventos} todaysDate={todaysDate} day={day} selectedDate={selectedDate} setSelectedDate={setSelectedDate} currentDate={currentDate} monthStart={monthStart} key={i} />);
       day = addDays(day, 1);
     }
     rows.push(<div key={Math.random()} className="row">{days}</div>);
@@ -55,13 +57,13 @@ export default function Dates({ eventos, selectedDate, setSelectedDate, setForma
     <div className="calendar m-2">
       <div className="header">
         <button onClick={prevMonth}>{'<'}</button>
-        <h2>{format(monthStart, 'MMMM yyyy')}</h2>
+        <h2 className={`${poppinsBold.className} text-[1.1rem]`}>{format(monthStart, 'MMMM yyyy')}</h2>
         <button onClick={nextMonth}>{'>'}</button>
       </div>
       <div className="days">
         <div className="row">
           {['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'].map(day => (
-            <div key={day} className="day-header font-bold">{day}</div>
+            <div key={day} className={`day-header ${poppinsBold.className}`}>{day}</div>
           ))}
         </div>
         {rows}

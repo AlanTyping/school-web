@@ -1,8 +1,11 @@
+import { figtree, figtreeBold, poppinsBold } from '../../../fonts/fonts'
+
 export default function CalendarHeader({ children }) {
   return (
     <>
-      <div className="w text-start font-bold text-[1.2rem]"><h2>Agenda</h2></div>
-      <div className="w text-center border-y-2 uppercase border-[#CCC] my-2"><h3>mes</h3></div>
+      <div className="w py-2 mb-2 uppercase text-start font-bold text-[1.2rem] border-b-2 border-[var(--lightContrast)]">
+        <h2 className={`${figtreeBold.className}`}>Agenda</h2>
+      </div>
       {children}
     </>
   )

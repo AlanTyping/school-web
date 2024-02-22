@@ -1,6 +1,6 @@
-import { isSameMonth, format, isSameDay} from 'date-fns'
-
-export default function Day({ day, monthStart, currentDate, eventos, selectedDate, setSelectedDate }) {
+import { isSameMonth, format, isSameDay, getMonth} from 'date-fns'
+import { figtree } from '../../../fonts/fonts';
+export default function Day({ day, monthStart, todaysDate, currentDate, eventos, selectedDate, setSelectedDate }) {
   const fechaFormateada = day.toLocaleDateString('es-ES', {
     day: '2-digit',
     month: '2-digit',
@@ -12,7 +12,7 @@ export default function Day({ day, monthStart, currentDate, eventos, selectedDat
   return (
     <div
       onClick={() => setSelectedDate(day)}
-      className={`day py-2 px-3 ${bg && 'bg-blue-300'} ${isSameDay(day, selectedDate) && 'bg-red-500 text-white'} ${!isSameMonth(day, monthStart) ? 'outside-month' : ''} ${isSameDay(day, currentDate) && currentDate.getMonth() === monthStart.getMonth() && 'bg-[#007bff] text-white'} hover:cursor-pointer`}
+      className={`day py-2 ${figtree.className} px-3 ${isSameDay(day, todaysDate) ? 'bg-[var(--lightContrast)] text-white' : bg && 'bg-blue-300'}  ${isSameDay(day, selectedDate) && 'bg-blue-400 text-white'} ${!isSameMonth(day, monthStart) ? 'outside-month' : ''} hover:cursor-pointer`}
     >
       {format(day, 'd')}
     </div>

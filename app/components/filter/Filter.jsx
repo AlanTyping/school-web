@@ -1,26 +1,26 @@
 import { useState } from "react";
 import { figtreeBold } from '../../fonts/fonts';
 
-export default function Filter({ setFilteredElements, elements, categorias }) {
+export default function Filter({ setFilteredElements, elements, categorias, backgroundBg, itemBg }) {
   const [filter, setFilter] = useState(false);
 
   const filterPosts = (categoria) => {
-    if (categoria) return setFilteredElements(elements.filter(e => e.categoria === categoria));
+    if (categoria) return setFilteredElements(elements.filter(e => e.categoria.trim () === categoria.trim()));
     return setFilteredElements(elements)
   }
 
   return (
-    <div className="w-full text-[#eee] flex justify-center flex-col items-end pb-2 pt-2">
-      <div onClick={() => setFilter(!filter)} className="mr-8 w-[220px] rounded py-2 bg-[var(--darkBg)]" >
-        <h1 className="text-[1.1rem] text-center cursor-pointer">Filtrar</h1>
+    <div className="w text-[#eee] flex justify-center flex-col items-start pb-2 pt-2">
+      <div onClick={() => setFilter(!filter)} className={`w-[150px] md:w-[220px] rounded py-2 ${backgroundBg}`} >
+        <h1 className="text-[1rem] text-center cursor-pointer">Filtrar</h1>
 
         <div className="relative">
           {filter &&
             <div
-              className="flex p-2 items-start flex-col absolute w-full top-0 h-auto pb-3 right-0 
-              bg-[var(--darkBg)] z-10 rounded">
+              className={`flex p-2 items-start flex-col absolute w-full top-0 h-auto pb-3 right-0 
+              ${backgroundBg} z-10 rounded`}>
               {categorias.map(({ borde, categoria, color }, i) => (
-                <button key={i} onClick={() => filterPosts(categoria)} className="flex-center flex-row rounded py-2 my-1 bg-[var(--bg)] pr-2 pl-1 relative">
+                <button key={i} onClick={() => filterPosts(categoria)} className={`${itemBg} flex-center flex-row rounded py-2 my-1 pr-2 pl-1 relative`}>
                   <div className="flex-center w-[25px]">
                     <div className={`bg-[${color}] border-[${borde}] h-[12px] rounded-[50%] w-[12px]  border-[2px]`} />
                   </div>
@@ -29,7 +29,7 @@ export default function Filter({ setFilteredElements, elements, categorias }) {
                   </div>
                 </button>
               ))}
-               <button onClick={() => filterPosts()} className="flex-center flex-row rounded py-2 my-1 bg-[var(--bg)] pr-2 pl-1 relative">
+               <button onClick={() => filterPosts()} className={`${itemBg} flex-center flex-row rounded py-2 my-1 pr-2 pl-1 relative`}>
                   <div className="flex-center w-[25px]">
                     <div className={`h-[12px] rounded-[50%] w-[12px] border-[2px]`} />
                   </div>
