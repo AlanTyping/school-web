@@ -45,12 +45,7 @@
   color: #ccc;
 }
 
-.current-day {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.event-container {
+#event-container {
   scrollbar-color: #afafaf #fff;
 }
 

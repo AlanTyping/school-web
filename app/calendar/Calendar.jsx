@@ -77,7 +77,7 @@ const Calendar = ({ eventosProp }) => {
   },];
 
   return (
-    <div className="bg-white h w flex flex-col items-center">
+    <div className="bg-white h min-h-[700px] w flex flex-col items-center">
       <div className="w flex-center">
         <div className="w-[90%] md:w-[80%] flex flex-col">
           <CalendarHeader>

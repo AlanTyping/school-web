@@ -33,7 +33,7 @@ export const api = {
       next: { tags: ['eventos']}})
     .then((data) => data.text())
       .then((data) => data.split('\n').slice(1).map((row) => {
-        const [fecha, titulo, descripcion, imagen, link, categori] = row.split('\t');
+        const [fecha, titulo, descripcion, desde, hasta, lugar, link, categori, turno, segmento, curso, imagen] = row.split('\t');
         const formattedImage = imagen.replace(/\\/g, '/').trim();
         const categoria = categori.replace(/\s/g, '')
 
@@ -41,9 +41,15 @@ export const api = {
           fecha,
           titulo,
           descripcion,
-          formattedImage,
+          desde,
+          hasta,
+          lugar,
           link,
-          categoria
+          categoria,
+          turno,
+          segmento,
+          curso,
+          formattedImage
         }
       }))
       .then((array) => array.reverse())

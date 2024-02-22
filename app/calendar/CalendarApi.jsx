@@ -8,4 +8,5 @@ export default async function CalendarApi () {
   const eventos = await api.eventos();
 
   return <Calendar eventosProp={eventos} />
+  return <></>
 };

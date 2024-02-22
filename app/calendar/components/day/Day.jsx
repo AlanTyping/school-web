@@ -12,7 +12,7 @@ export default function Day({ day, monthStart, currentDate, eventos, selectedDat
   return (
     <div
       onClick={() => setSelectedDate(day)}
-      className={`day py-2 px-3 ${bg && 'bg-blue-300'} ${isSameDay(day, selectedDate) && 'bg-red-500 text-white'} ${!isSameMonth(day, monthStart) ? 'outside-month' : ''} ${isSameDay(day, currentDate) && currentDate.getMonth() === monthStart.getMonth() && 'current-day'} hover:cursor-pointer`}
+      className={`day py-2 px-3 ${bg && 'bg-blue-300'} ${isSameDay(day, selectedDate) && 'bg-red-500 text-white'} ${!isSameMonth(day, monthStart) ? 'outside-month' : ''} ${isSameDay(day, currentDate) && currentDate.getMonth() === monthStart.getMonth() && 'bg-[#007bff] text-white'} hover:cursor-pointer`}
     >
       {format(day, 'd')}
     </div>

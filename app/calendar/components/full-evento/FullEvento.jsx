@@ -40,7 +40,7 @@ export default function FullEvento({ eventos, closeDialog, i }) {
   }
 
   if (currentElement) {
-    const { fecha, descripcion, titulo, imagen, link } = currentElement;
+    const { fecha, titulo, descripcion, desde, hasta, lugar, link, categoria, turno, segmento, curso, imagen } = currentElement;
 
     return (
       <>

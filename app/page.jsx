@@ -9,6 +9,7 @@ import DynamicHeader from "./components/dynamic-header/DynamicHeader";
 import Header from "./components/header/Header";
 import { Poppins } from "next/font/google";
 import PostsApi from "./components/posts-display/PostsApi";
+import CalendarApi from "./calendar/CalendarApi";
 
 const poppins = Poppins({ subsets: ['latin'], weight: "400" });
 
@@ -27,6 +28,7 @@ export default function Home() {
       <SectionThree />
       <SectionFour /> */}
       <Testimonios />
+      {/* <CalendarApi /> */}
       <Contacto />
       <Footer />
     </main>
