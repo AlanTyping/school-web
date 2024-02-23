@@ -81,7 +81,7 @@ const Calendar = ({ eventosProp }) => {
   }];
 
   return (
-    <div className="bg-[#ddd] h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
+    <div className="bg-white h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
       <div className="w-[90%] md:w-[80%] flex flex-col mt-6">
         <CalendarHeader>
           <Filter backgroundBg={'bg-[var(--bg)]'} itemBg={''} categorias={categorias} elements={eventos} setFilteredElements={setEventosFiltrados} />
@@ -89,7 +89,7 @@ const Calendar = ({ eventosProp }) => {
 
         <div className="w flex flex-col md:flex-row items-center">
           <Dates eventos={eventosFiltrados} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
-          <Eventos formatedDate={formatedDate} eventos={eventosFiltrados} currentEvents={currentEvents} />
+          <Eventos selectedDate={selectedDate} formatedDate={formatedDate} eventos={eventosFiltrados} currentEvents={currentEvents} />
         </div>
       </div>
     </div>
