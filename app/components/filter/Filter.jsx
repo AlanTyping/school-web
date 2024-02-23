@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { figtreeBold } from '../../fonts/fonts';
+import { figtreeBold, figtree } from '../../fonts/fonts';
 
 export default function Filter({ setFilteredElements, elements, categorias, backgroundBg, itemBg }) {
   const [filter, setFilter] = useState(false);
 
   const filterPosts = (categoria) => {
-    if (categoria) return setFilteredElements(elements.filter(e => e.categoria.trim () === categoria.trim()));
+    if (categoria) return setFilteredElements(elements.filter(e => e.categoria === categoria.trim()));
     return setFilteredElements(elements)
   }
 
@@ -20,7 +20,7 @@ export default function Filter({ setFilteredElements, elements, categorias, back
               className={`flex p-2 items-start flex-col absolute w-full top-0 h-auto pb-3 right-0 
               ${backgroundBg} z-10 rounded`}>
               {categorias.map(({ borde, categoria, color }, i) => (
-                <button key={i} onClick={() => filterPosts(categoria)} className={`${itemBg} flex-center flex-row rounded py-2 my-1 pr-2 pl-1 relative`}>
+                <button key={i} onClick={() => filterPosts(categoria)} className={`bg-[${color}] flex-center flex-row rounded py-2 my-1 pr-2 pl-1 relative`}>
                   <div className="flex-center w-[25px]">
                     <div className={`bg-[${color}] border-[${borde}] h-[12px] rounded-[50%] w-[12px]  border-[2px]`} />
                   </div>
@@ -29,12 +29,12 @@ export default function Filter({ setFilteredElements, elements, categorias, back
                   </div>
                 </button>
               ))}
-               <button onClick={() => filterPosts()} className={`${itemBg} flex-center flex-row rounded py-2 my-1 pr-2 pl-1 relative`}>
-                  <div className="flex-center w-[25px]">
-                    <div className={`h-[12px] rounded-[50%] w-[12px] border-[2px]`} />
-                  </div>
+
+              <div className="w-[100%] bg-[var(--lightBg)] h-[1px] my-2" />
+
+               <button onClick={() => filterPosts()} className={`bg-[var(--darkBg)] w flex-center flex-row rounded py-2 my-1 pr-2 pl-1 relative`}>
                   <div className="relative flex-center">
-                    <span className={`text-[0.95rem] ${figtreeBold.className}`}>none</span>
+                    <span className={`text-[0.95rem] ${figtree.className}`}>quitar filtros</span>
                   </div>
                 </button>
             </div>}

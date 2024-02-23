@@ -6,7 +6,7 @@ import {
   useLightboxState,
 } from "yet-another-react-lightbox";
 
-function isNextJsImage(slide: any) {
+function isNextJsImage(slide) {
   return (
     isImageSlide(slide) &&
     typeof slide.width === "number" &&

@@ -4,19 +4,13 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-interface FormValues {
-  user_email: string;
-  user_name: string;
-  message: string;
-}
-
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID
 
 const MyForm = () => {
   const form = useRef();
-  const [data, setData] = useState<FormValues>({ user_email: '', user_name: '', message: '' })
+  const [data, setData] = useState({ user_email: '', user_name: '', message: '' })
 
   const sendEmail = () => {
 
@@ -40,8 +34,8 @@ const MyForm = () => {
       <h1>My Form</h1>
       <Formik
         initialValues={{ user_email: '', user_name: '', message: '' }}
-        validate={(values: FormValues) => {
-          const errors: Partial<FormValues> = {};
+        validate={(values) => {
+          const errors = {};
           if (!values.user_name) {
             errors.user_name = 'Required';
           } else if (!values.user_email) {
@@ -55,7 +49,7 @@ const MyForm = () => {
           }
           return errors;
         }}
-        onSubmit={(values: FormValues, { setSubmitting, resetForm }) => {
+        onSubmit={(values, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           sendEmail();
           resetForm();

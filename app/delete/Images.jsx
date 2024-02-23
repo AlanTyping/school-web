@@ -1,22 +1,12 @@
 'use client'
 
-import { FC } from 'react';
 import './index.css'
 import Image from "next/image";
 
-interface ImagesProps {
-  data: {
-    src: string;
-    title: string;
-    description: string;
-  }[];
-  onClick: (index: number) => void;
-}
-
-const Images: FC<ImagesProps> = (props) => {
+const Images = (props) => {
   const { data, onClick } = props;
 
-  const handleClickImage = (index: number) => {
+  const handleClickImage = (index) => {
     onClick(index);
   };
 

@@ -15,7 +15,7 @@ import {
 import Images from "./Images";
 
 export default function Page() {
-  const [index, setIndex] = useState<number>(-1);
+  const [index, setIndex] = useState(-1);
 
   return (
     <>

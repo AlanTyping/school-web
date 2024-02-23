@@ -64,27 +64,27 @@ const Calendar = ({ eventosProp }) => {
 
   const categorias = [{
     categoria: 'proyectos',
-    color: '#492e08',
+    color: '#3d1700',
     borde: '#f08c00'
   }, {
     categoria: 'comunicado',
-    color: '#154a7b',
+    color: '#02003d',
     borde: '#a5d8ff'
   }, {
     categoria: 'eventos',
-    color: '#460c4b',
+    color: '#24003d',
     borde: '#f7a5ff'
   }, {
     categoria: 'dia sin clases',
-    color: '#460c4b',
-    borde: '#f7a5ff'
+    color: '#4b0c0c',
+    borde: '#971a1a'
   }];
 
   return (
-    <div className="bg-white h min-h-[700px] w flex flex-col items-center">
+    <div className="bg-[#ccc] h min-h-[700px] w flex flex-col items-center">
       <div className="w-[90%] md:w-[80%] flex flex-col mt-6">
         <CalendarHeader>
-          <Filter backgroundBg={'bg-[var(--lightContrast)]'} itemBg={''} categorias={categorias} elements={eventos} setFilteredElements={setEventosFiltrados} />
+          <Filter backgroundBg={'bg-[var(--bg)]'} itemBg={''} categorias={categorias} elements={eventos} setFilteredElements={setEventosFiltrados} />
         </CalendarHeader>
 
         <div className="w flex flex-col md:flex-row items-center">

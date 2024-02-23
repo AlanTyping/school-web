@@ -9,9 +9,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #f0f0f0;
-  border-bottom: 1px solid #93c5fd;
-  border-radius: 5px 5px 0 0;
 }
 
 .header h2 {
@@ -21,6 +18,7 @@
 .days {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .row {
@@ -31,18 +29,18 @@
   flex: 1;
   padding: 5px;
   text-align: center;
-  background-color: #f0f0f0;
+  margin-top: 4px;
 }
 
 .day {
   flex: 1;
   text-align: center;
   margin: 3px;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
 .outside-month {
-  color: #ccc;
+  color: #777;
 }
 
 #event-container {

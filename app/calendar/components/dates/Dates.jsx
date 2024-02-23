@@ -27,7 +27,7 @@ export default function Dates({ eventos, selectedDate, setSelectedDate, setForma
 
   while (day <= endDate) {
     for (let i = 0; i < 7; i++) {
-      days.push(<Day eventos={eventos} todaysDate={todaysDate} day={day} selectedDate={selectedDate} setSelectedDate={setSelectedDate} currentDate={currentDate} monthStart={monthStart} key={i} />);
+      days.push(<Day eventos={eventos} todaysDate={todaysDate} day={day} selectedDate={selectedDate} setSelectedDate={setSelectedDate} monthStart={monthStart} key={i} />);
       day = addDays(day, 1);
     }
     rows.push(<div key={Math.random()} className="row">{days}</div>);
