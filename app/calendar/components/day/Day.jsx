@@ -7,12 +7,18 @@ export default function Day({ day, monthStart, todaysDate, eventos, selectedDate
     year: 'numeric'
   });
 
-  const bg = eventos.some((e) => e.fecha === fechaFormateada);
+  const bg = eventos.filter((e) => e.fecha === fechaFormateada);
+  let diaSinClases = []
+
+  if (bg.length >= 1) {
+    diaSinClases = bg.filter(e => e.categoria === 'díasinclases')
+  }
+  
 
   return (
     <div
       onClick={() => setSelectedDate(day)}
-      className={`day py-2 ${figtree.className} px-3 ${isSameDay(day, selectedDate) ? 'border-[var(--lightContrast)] border-b-[3px]' : isSameDay(day, todaysDate) ? 'border-[var(--darkBg)] border-b-[3px] bg-[var(--lightContrast)] text-white' : bg && 'border-[var(--lightBg)] border-b-[3px] bg-blue-200'} ${!isSameMonth(day, monthStart) && 'outside-month'} hover:cursor-pointer`}
+      className={`day py-2 ${figtree.className} px-3 ${isSameDay(day, selectedDate) ? 'border-[var(--lightContrast)] border-b-[3px]' : isSameDay(day, todaysDate) ? 'border-[var(--darkBg)] border-b-[3px] bg-[var(--lightContrast)] text-white' : diaSinClases.length >= 1 ? 'border-[#fa6060] border-b-[3px] bg-[#febfbf]' : bg.length >= 1 && 'border-[var(--lightBorder)] border-b-[3px] bg-[var(--lightBg)]'} ${!isSameMonth(day, monthStart) && 'outside-month'} hover:cursor-pointer`}
     >
       {format(day, 'd')}
     </div>

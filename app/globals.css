@@ -4,7 +4,8 @@
 
 :root {
     --bg: #001d3d;
-    --lightBg: #60a5fa;
+    --lightBg: #bfdbfe;
+    --lightBorder: #60a5fa;
     --lightContrast: #004690;
     --darkBg: #021321;
 }
