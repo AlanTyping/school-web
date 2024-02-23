@@ -19,7 +19,7 @@ export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, ev
   };
 
   return (
-    <div className="w h-[100px] shadow-[0px_0px_5px_0px_rgba(0,0,0,0.5)] flex flex-col items-start mb-2 p-2 text-[0.95rem]">
+    <div className="w flex flex-col items-start mb-2 p-2 text-[0.95rem]">
       <button onClick={() => openDialog()} className='font-bold text-[#004690] border-[#007bff] text-[1.1rem]'>{titulo}</button>
 
       {desde &&

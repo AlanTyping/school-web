@@ -72,6 +72,10 @@ img {
     height: 500px;
 }
 
+.shadow-bottom {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
 .event-modal::backdrop {
     background-color: rgba(0, 0, 0, 0.691);
 }

@@ -81,7 +81,7 @@ const Calendar = ({ eventosProp }) => {
   }];
 
   return (
-    <div className="bg-[#ccc] h min-h-[700px] w flex flex-col items-center">
+    <div className="bg-[#ddd] h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
       <div className="w-[90%] md:w-[80%] flex flex-col mt-6">
         <CalendarHeader>
           <Filter backgroundBg={'bg-[var(--bg)]'} itemBg={''} categorias={categorias} elements={eventos} setFilteredElements={setEventosFiltrados} />
