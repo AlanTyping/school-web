@@ -1,4 +1,4 @@
-import { SlideImage } from "yet-another-react-lightbox/*";
+// import { SlideImage } from "yet-another-react-lightbox/*";
 
 export const slides = [
   {
