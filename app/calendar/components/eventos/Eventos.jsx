@@ -3,6 +3,7 @@ import { figtreeBold, figtree } from '../../../fonts/fonts';
 import { isSameDay } from "date-fns";
 
 export default function Eventos({ selectedDate, formatedDate, currentEvents, eventos }) {
+  console.log(currentEvents)
   const todaysDate = new Date();
   const diaSinClases = currentEvents.filter(e => e.categoria === 'díasinclases');
 
@@ -15,7 +16,7 @@ export default function Eventos({ selectedDate, formatedDate, currentEvents, eve
         {diaSinClases.length >= 1 && <span className={`${figtreeBold.className} text-[var(--noClases)] text-[1.15rem] ml-6 mt-1`}>No hay clases</span>}
       </div>
       <div id="event-container" className="w max-h-[200px] mt-4 flex flex-col overflow-y-auto overflow-x-hidden">
-        {currentEvents.map(({ titulo, fecha, descripcion, i, desde, hasta }) => <Evento i={i} eventos={eventos} descripcion={descripcion} desde={desde} hasta={hasta} fecha={fecha} titulo={titulo} key={i} />)}
+        {currentEvents.map(({ titulo, fecha, descripcion, i, desde, hasta, categoria }) => <Evento categoria={categoria} i={i} eventos={eventos} descripcion={descripcion} desde={desde} hasta={hasta} fecha={fecha} titulo={titulo} key={i} />)}
       </div>
     </div>
   )

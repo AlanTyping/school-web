@@ -34,9 +34,10 @@ export default function Dates({ eventos, selectedDate, setSelectedDate, setForma
     days = [];
   }
 
+
   useEffect(() => {
     if (eventos.length !== 0) {
-      setCurrentEvents(eventos.map((e, i) => {
+      setCurrentEvents(eventos.filter(e => e.titulo !== '').map((e, i) => {
         if (e.fecha === fechaFormateada) return { ...e, i: i }
         else return undefined;
       }).filter((element) => element !== undefined));

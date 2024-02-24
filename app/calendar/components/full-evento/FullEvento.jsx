@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link";
 import Image from "next/image";
-import { figtreeBold, figtree } from '../../../fonts/fonts'
+import { figtreeBold, figtree, poppinsBold } from '../../../fonts/fonts'
 import linkSvg from '../assets/link.svg';
 import closeSvg from '../assets/close.svg';
 
@@ -49,7 +49,12 @@ export default function FullEvento({ eventos, closeDialog, i }) {
             <div className="w flex justify-end">
               <Image src={closeSvg} alt="close" onClick={closeDialog} className="h-[25px] w-[25px]" />
             </div>
-            <span>{fecha}</span>
+
+            <div className={`w flex justify-end ${figtreeBold.className}`}>
+              <span className="text-[1.2rem]">{fecha}</span>
+            </div>
+            
+
             <div className="flex flex-col-reverse flex-center w-full">
               {imagen && <div className="relative h-[160px] sm:h-[180px] w-full mt-3">
                 <Image onClick={() => setBigImage(true)} className={`cursor-pointer rounded`} style={{ objectFit: "contain" }} quality={65} fill={true} sizes='30vw' alt="" src={imagen} />

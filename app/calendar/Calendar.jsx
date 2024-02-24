@@ -14,6 +14,7 @@ const Calendar = ({ eventosProp }) => {
   const [currentEvents, setCurrentEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [eventosFiltrados, setEventosFiltrados] = useState([]);
+  const [fullEventos, setFullEventos] = useState([]);
 
   const compararFechas = (a, b) => {
     // Convertir las fechas al formato 'yyyy/mm/dd' para compararlas
@@ -41,12 +42,13 @@ const Calendar = ({ eventosProp }) => {
     //setear los eventos ordenados por fechas
     // al renderizar el componente
     const eventosOrdenados = eventosProp.sort(compararFechas);
+    setFullEventos(eventosOrdenados.filter(e => e.titulo !== ''));
     setEventos(eventosOrdenados);
     setEventosFiltrados(eventosOrdenados);
 
     //setear si hay, las eventos que coincidan
     //con la fecha seleccionada
-    setCurrentEvents(eventosOrdenados.map((e, i) => {
+    setCurrentEvents(eventosOrdenados.filter(e => e.titulo !== '').map((e, i) => {
       if (e.fecha === fechaFormateada) return { ...e, i: i }
       else return undefined;
     }).filter((element) => element !== undefined));
@@ -73,7 +75,7 @@ const Calendar = ({ eventosProp }) => {
 
         <div className="w flex flex-col md:flex-row items-center">
           <Dates eventos={eventosFiltrados} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
-          <Eventos selectedDate={selectedDate} formatedDate={formatedDate} eventos={eventosFiltrados} currentEvents={currentEvents} />
+          <Eventos selectedDate={selectedDate} formatedDate={formatedDate} eventos={fullEventos} currentEvents={currentEvents} />
         </div>
       </div>
     </div>

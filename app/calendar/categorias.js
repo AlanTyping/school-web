@@ -1,19 +1,19 @@
 const categorias = [{
-  categoria: 'proyectos',
-  color: '#3d1700',
-  borde: '#f08c00'
+  categoria: 'proyecto',
+  bg: 'bg-[#f08c00]',
+  borde: 'border-[#f08c00]'
 }, {
   categoria: 'comunicado',
-  color: '#02003d',
-  borde: '#a5d8ff'
+  bg: 'bg-[#a5d8ff]',
+  borde: 'border-[#a5d8ff]'
 }, {
-  categoria: 'eventos',
-  color: '#24003d',
-  borde: '#f7a5ff'
+  categoria: 'evento',
+  bg: 'bg-[#f7a5ff]',
+  borde: 'border-[#f7a5ff]'
 }, {
   categoria: 'día sin clases',
-  color: '#4b0c0c',
-  borde: 'var(--noClases)'
+  bg: 'bg-[var(--noClases)]',
+  borde: 'border-[var(--noClases)]'
 }];
 
 export default categorias;

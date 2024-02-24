@@ -8,6 +8,7 @@ export default function Day({ day, monthStart, todaysDate, eventos, selectedDate
   });
 
   const bg = eventos.filter((e) => e.fecha === fechaFormateada);
+  
   let diaSinClases = [];
 
   if (bg.length >= 1) {
