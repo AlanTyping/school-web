@@ -65,12 +65,12 @@ export default function FullEvento({ eventos, closeDialog, i }) {
                 </div>}
 
               {titulo &&
-                <div className={`text-[1.3rem] mt-4 leading-[23px] flex ${figtreeBold.className}`}>
+                <div className={`text-[1.3rem] text-[var(--lightContrast)] mt-4 leading-[23px] flex ${figtreeBold.className}`}>
                   <h1>{titulo}</h1>
                 </div>}
 
               {desde &&
-                <div className={`w flex flex-row mt-1 items-center text-[0.85rem] text-[#6f8399] ${figtreeBold.className}`}>
+                <div className={`w flex flex-row mt-2 items-center text-[0.85rem] text-[#6f8399] ${figtreeBold.className}`}>
                   <Image src={hour} alt='watch' className={`h-[15px] w-[15px] mr-2`} />
                   <span>{desde}</span>
                   {hasta &&
