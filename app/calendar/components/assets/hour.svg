@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" ?>
+
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 142.447 142.447" xml:space="preserve">
+<svg fill="#004690" width="800px" height="800px" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+
+<title/>
+
 <g>
-	<path style="fill:#1D1D1B;" d="M71.224,0C31.951,0,0,31.951,0,71.224s31.951,71.224,71.224,71.224s71.224-31.951,71.224-71.224
-		S110.496,0,71.224,0z M71.224,127.447C40.222,127.447,15,102.226,15,71.224S40.222,15,71.224,15s56.224,25.222,56.224,56.224
-		S102.226,127.447,71.224,127.447z"/>
-	<path style="fill:#1D1D1B;" d="M100.923,72.016H71.724V46.724c0-4.143-3.357-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v32.792
-		c0,4.143,3.357,7.5,7.5,7.5h36.699c4.143,0,7.5-3.357,7.5-7.5S105.065,72.016,100.923,72.016z"/>
+
+<path d="M48,0A48,48,0,1,0,96,48,48.055,48.055,0,0,0,48,0Zm0,84A36,36,0,1,1,84,48,36.0393,36.0393,0,0,1,48,84Z"/>
+
+<path d="M66,42H54V30a6,6,0,0,0-12,0V48a5.9966,5.9966,0,0,0,6,6H66a6,6,0,0,0,0-12Z"/>
+
 </g>
+
 </svg>

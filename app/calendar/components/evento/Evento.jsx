@@ -5,9 +5,10 @@ import FullEvento from '../full-evento/FullEvento';
 import { figtree, figtreeBold, poppinsBold } from '../../../fonts/fonts';
 import categorias from '../../categorias';
 import Image from 'next/image';
-import hour from '../assets/hour2.svg'
+import hour from '../assets/hour.svg'
+import location from '../assets/location.svg'
 
-export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, eventos, categoria }) {
+export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, eventos, categoria, lugar }) {
   const [isOpen, setIsOpen] = useState(false);
   const dialogRef = useRef(null);
   let categoriaColor = '';
@@ -53,6 +54,13 @@ export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, ev
               <span>{hasta}</span>
             </>
           }
+        </div>
+      }
+
+      {lugar &&
+        <div className={`w flex flex-row items-center text-[0.85rem] text-[#6f8399] ${figtreeBold.className}`}>
+          <Image src={location} alt='' className={`h-[15px] w-[15px] mr-2`} />
+          <span>{lugar}</span>
         </div>
       }
 

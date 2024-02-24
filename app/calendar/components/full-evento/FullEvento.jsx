@@ -6,8 +6,8 @@ import Image from "next/image";
 import { figtreeBold, figtree, poppinsBold } from '../../../fonts/fonts'
 import linkSvg from '../assets/link.svg';
 import closeSvg from '../assets/close.svg';
-import hour from '../assets/hour2.svg';
-import BigImage from "../../../components/bigImage/BigImage";
+import hour from '../assets/hour.svg';
+import location from '../assets/location.svg';
 
 export default function FullEvento({ eventos, closeDialog, i }) {
   const [currentIndex, setCurrentIndex] = useState(i);
@@ -59,28 +59,35 @@ export default function FullEvento({ eventos, closeDialog, i }) {
                 <span className="text-[1.4rem] border-b-[2px] border-[var(--lightBorder)]">{fecha}</span>
               </div>
 
-                {imagen && 
+              {imagen &&
                 <div className="relative h-[160px] sm:h-[180px] w-full mt-3">
-                  <Image onClick={() => setBigImage(true)} className={`cursor-pointer rounded`} style={{ objectFit: "contain" }} quality={65} fill={true} sizes='30vw' alt="" src={imagen} />
+                  <Image onClick={() => setBigImage(true)} className={`rounded`} style={{ objectFit: "contain" }} quality={65} fill={true} sizes='30vw' alt="" src={imagen} />
                 </div>}
 
-                {titulo && 
+              {titulo &&
                 <div className={`text-[1.3rem] mt-4 leading-[23px] flex ${figtreeBold.className}`}>
                   <h1>{titulo}</h1>
                 </div>}
 
-                {desde &&
-                  <div className={`w flex flex-row mt-1 items-center text-[0.85rem] text-[#6f8399] ${figtreeBold.className}`}>
-                    <Image src={hour} alt='watch' className={`h-[15px] w-[15px] mr-2`} />
-                    <span>{desde}</span>
-                    {hasta &&
-                      <>
-                        <span className='mx-2'>-</span>
-                        <span>{hasta}</span>
-                      </>
-                    }
-                  </div>
-                }
+              {desde &&
+                <div className={`w flex flex-row mt-1 items-center text-[0.85rem] text-[#6f8399] ${figtreeBold.className}`}>
+                  <Image src={hour} alt='watch' className={`h-[15px] w-[15px] mr-2`} />
+                  <span>{desde}</span>
+                  {hasta &&
+                    <>
+                      <span className='mx-2'>-</span>
+                      <span>{hasta}</span>
+                    </>
+                  }
+                </div>
+              }
+
+              {lugar &&
+                <div className={`w flex flex-row items-center text-[1rem] text-[#6f8399] ${figtreeBold.className}`}>
+                  <Image src={location} alt='' className={`h-[15px] w-[15px] mr-2`} />
+                  <span>{lugar}</span>
+                </div>
+              }
 
               {descripcion && <div className={`max-h-[250px] overflow-y-auto  flex w-full mt-3 mb-2 justify-center text-[1rem] ${figtree.className}`}>
                 <p>{descripcion}</p>
@@ -94,7 +101,6 @@ export default function FullEvento({ eventos, closeDialog, i }) {
                   </Link>
                 </div>}
             </div>
-            {bigImage && <BigImage />}
           </>
         }
       </>

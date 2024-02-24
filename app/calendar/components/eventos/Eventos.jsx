@@ -15,7 +15,7 @@ export default function Eventos({ selectedDate, formatedDate, currentEvents, eve
         {diaSinClases.length >= 1 && <span className={`${figtreeBold.className} text-[var(--noClases)] text-[1.15rem] ml-6 mt-1`}>No hay clases</span>}
       </div>
       <div id="event-container" className="w max-h-[200px] mt-6 flex flex-col overflow-y-auto overflow-x-hidden">
-        {currentEvents.map(({ titulo, fecha, descripcion, i, desde, hasta, categoria }) => <Evento categoria={categoria} i={i} eventos={eventos} descripcion={descripcion} desde={desde} hasta={hasta} fecha={fecha} titulo={titulo} key={i} />)}
+        {currentEvents.map(({ titulo, fecha, descripcion, i, desde, hasta, categoria, lugar }) => <Evento categoria={categoria} i={i} eventos={eventos} descripcion={descripcion} desde={desde} hasta={hasta} lugar={lugar} fecha={fecha} titulo={titulo} key={i} />)}
       </div>
     </div>
   )
