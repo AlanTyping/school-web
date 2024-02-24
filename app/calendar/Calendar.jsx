@@ -68,12 +68,15 @@ const Calendar = ({ eventosProp }) => {
 
   return (
     <div className="bg-white h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
-      <div className="w-[90%] md:w-[80%] flex flex-col mt-6">
-        <CalendarHeader>
-          <Filter backgroundBg={'bg-[var(--bg)]'} itemBg={'bg-[var(--lightContrast)]'} categorias={categorias} elements={eventos} setFilteredElements={setEventosFiltrados} />
-        </CalendarHeader>
+      <div className="w-[90%] md:w-[90%] md:items-center flex flex-col mt-6">
+        <div className="w md:w-[85%]">
+          <CalendarHeader>
+            <Filter backgroundBg={'bg-[var(--bg)]'} itemBg={'bg-[var(--lightContrast)]'} categorias={categorias} elements={eventos} setFilteredElements={setEventosFiltrados} />
+          </CalendarHeader>
+        </div>
 
-        <div className="w flex flex-col md:flex-row items-center">
+
+        <div className="w flex flex-col md:flex-row md:justify-evenly items-center">
           <Dates eventos={eventosFiltrados} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
           <Eventos selectedDate={selectedDate} formatedDate={formatedDate} eventos={fullEventos} currentEvents={currentEvents} />
         </div>

@@ -43,8 +43,6 @@ export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, ev
         </>
       }
 
-
-
       {desde &&
         <div className={`w flex flex-row items-center text-[0.85rem] text-[#6f8399] ${figtreeBold.className}`}>
           <Image src={hour} alt='watch' className={`h-[15px] w-[15px] mr-2`} />

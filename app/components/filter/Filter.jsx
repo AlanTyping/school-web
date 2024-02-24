@@ -11,7 +11,7 @@ export default function Filter({ setFilteredElements, elements, backgroundBg, it
   }
 
   return (
-    <div className="w text-[#eee] flex justify-center flex-col items-start pb-2 pt-2">
+    <div className="w text-[#eee] flex justify-center flex-col items-start md:items-end pb-2 pt-2">
       <div onClick={() => setFilter(!filter)} className={`w-[150px] md:w-[220px] rounded py-2 ${backgroundBg}`} >
         <h1 className="text-[1rem] text-center cursor-pointer">Filtrar</h1>
 
