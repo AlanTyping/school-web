@@ -6,8 +6,8 @@ import { figtree, figtreeBold, poppinsBold } from '../../../fonts/fonts';
 import categorias from '../../categorias';
 import Image from 'next/image';
 import hour from '../assets/hour2.svg'
- 
-export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, eventos, categoria }) {  
+
+export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, eventos, categoria }) {
   const [isOpen, setIsOpen] = useState(false);
   const dialogRef = useRef(null);
   let categoriaColor = '';
@@ -34,11 +34,11 @@ export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, ev
 
   return (
     <div className="w flex flex-col relative items-start mb-4 pl-4 text-[0.95rem]">
-       <div className={`inset-y-0 absolute left-0 w-[4px] rounded ${categoriaColor && `${categoriaColor}`}`} />
+      <div className={`inset-y-0 absolute left-0 w-[4px] rounded ${categoriaColor && `${categoriaColor}`}`} />
       {titulo &&
         <>
           <div className="w flex flex-row">
-            <button onClick={() => openDialog()} className={`font-bold text-[var(--lightContrast)] text-[1rem]`}>{titulo}</button>
+            <button onClick={() => openDialog()} className={`font-bold text-[var(--lightContrast)] truncate text-[1rem]`}>{titulo}</button>
           </div>
         </>
       }

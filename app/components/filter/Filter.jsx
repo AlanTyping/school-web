@@ -21,10 +21,10 @@ export default function Filter({ setFilteredElements, elements, backgroundBg, it
               className={`flex p-2 items-start flex-col absolute w-full top-0 h-auto pb-3 right-0 
               ${backgroundBg} z-10 rounded`}>
               {categorias.map(({ borde, categoria, color }, i) => (
-                <button key={i} onClick={() => filterPosts(categoria)} className={`bg-[${borde}] flex-center flex-row rounded py-2 my-1 pr-2 pl-1 relative`}>
-                  {/* <div className="flex-center w-[25px]">
-                    <div className={`bg-[${color}] border-[${borde}] h-[12px] rounded-[50%] w-[12px]  border-[2px]`} />
-                  </div> */}
+                <button key={i} onClick={() => filterPosts(categoria)} className={`flex-center flex-row rounded py-2 my-1 pr-2 pl-1 relative`}>
+                  <div className="flex-center w-[25px]">
+                    <div className={`${borde} h-[12px] rounded-[50%] w-[12px]  border-[2px]`} />
+                  </div>
                   <div className="relative flex-center">
                     <span className={`text-[0.95rem] ${figtreeBold.className}`}>{categoria}</span>
                   </div>
