@@ -44,7 +44,7 @@ export default function FullEvento({ eventos, closeDialog, i }) {
 
   if (currentElement) {
     const { fecha, titulo, descripcion, desde, hasta, lugar, link, categoria, turno, segmento, curso, imagen } = currentElement;
-    
+
     return (
       <>
         {
@@ -82,13 +82,13 @@ export default function FullEvento({ eventos, closeDialog, i }) {
                   </div>
                 }
 
-              {descripcion && <div className={`max-h-[300px] overflow-y-auto  flex w-full mt-3 mb-2 justify-center text-[1rem] ${figtree.className}`}>
+              {descripcion && <div className={`max-h-[250px] overflow-y-auto  flex w-full mt-3 mb-2 justify-center text-[1rem] ${figtree.className}`}>
                 <p>{descripcion}</p>
               </div>}
 
               {link.length > 5 &&
                 <div className={`text-[0.85rem] mt-5 w-[97%] flex justify-start`}>
-                  <Link className='flex bg-[var(--bg)] text-white rounded mb-2 p-1 pr-4 flex-row items-center' href={link} target="blank">
+                  <Link className='flex truncate bg-[var(--bg)] text-white rounded mb-2 p-1 pr-4 flex-row items-center' href={link} target="blank">
                     <Image src={linkSvg} alt='' height={30} width={30} className='mr-[4px]' />
                     {link}
                   </Link>
