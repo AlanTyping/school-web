@@ -8,6 +8,7 @@ import linkSvg from '../assets/link.svg';
 import closeSvg from '../assets/close.svg';
 import hour from '../assets/hour.svg';
 import location from '../assets/location.svg';
+import categorias from "../../categorias";
 
 export default function FullEvento({ eventos, closeDialog, i }) {
   const [currentIndex, setCurrentIndex] = useState(i);
@@ -43,7 +44,17 @@ export default function FullEvento({ eventos, closeDialog, i }) {
   // }
 
   if (currentElement) {
-    const { fecha, titulo, descripcion, desde, hasta, lugar, link, categoria, turno, segmento, curso, imagen } = currentElement;
+    const { fecha, titulo, descripcion, desde, hasta, lugar, link, imagen, categoria } = currentElement;
+    let categoriaStyle = {};
+
+    if (categoria) {
+      categorias.forEach(c => {
+        if (c.categoria.replace(/\s+/g, '') === categoria) {
+          categoriaStyle = c;
+          return;
+        }
+      });
+    }
 
     return (
       <>
@@ -56,7 +67,7 @@ export default function FullEvento({ eventos, closeDialog, i }) {
             <div className="w px-3">
 
               <div className={`w flex justify-start text-[var(--lightContrast)] ${figtreeBold.className}`}>
-                <span className="text-[1.4rem] border-b-[2px] border-[var(--lightBorder)]">{fecha}</span>
+                <span className={`text-[1.4rem] border-b-[2px] ${categoriaStyle ? `${categoriaStyle.borde}` : 'border-[var(--lightBorder)]'}`}>{fecha}</span>
               </div>
 
               {imagen &&
@@ -65,7 +76,7 @@ export default function FullEvento({ eventos, closeDialog, i }) {
                 </div>}
 
               {titulo &&
-                <div className={`text-[1.3rem] text-[var(--lightContrast)] mt-4 leading-[23px] flex ${figtreeBold.className}`}>
+                <div className={`text-[1.3rem] ${categoriaStyle ? `${categoriaStyle.texto}` : 'text-[var(--lightContrast)]'} mt-4 leading-[23px] flex ${figtreeBold.className}`}>
                   <h1>{titulo}</h1>
                 </div>}
 

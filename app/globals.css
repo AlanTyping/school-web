@@ -7,9 +7,23 @@
     --lightBg: #bfdbfe;
     --lightBorder: #60a5fa;
     --lightContrast: #004690;
-    --noClases: #fa6060;
-    --noClasesBg: #febfbf;
     --darkBg: #021321;
+
+    --proyectoLight: #f1af52;
+    --proyecto: #f08c00;
+    --proyectoDark: #844d00;
+
+    --comunicadoLight: #a5d8ff;
+    --comunicado: #46afff;
+    --comunicadoDark: #002c4d;
+
+    --diaSinClasesLight: #febfbf;
+    --diaSinClases: #fa6060;
+    --diaSinClasesDark: #360000;
+
+    --eventoLight: #f7a5ff;
+    --evento: #e95ef5;
+    --eventoDark: #602466;
 }
 
 html {

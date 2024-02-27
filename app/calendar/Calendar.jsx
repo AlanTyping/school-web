@@ -7,6 +7,7 @@ import Eventos from './components/eventos/Eventos';
 import CalendarHeader from './components/calendar-header/CalendarHeader';
 import Filter from '../components/filter/Filter';
 import categorias from './categorias';
+import calendario from '../calendar/components/assets/calendar.svg';
 
 const Calendar = ({ eventosProp }) => {
   const [eventos, setEventos] = useState([]);
@@ -68,6 +69,8 @@ const Calendar = ({ eventosProp }) => {
 
   return (
     <div className="bg-white h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
+      
+    
       <div className="w-[90%] md:w-[90%] md:items-center flex flex-col mt-6">
         <div className="w md:w-[85%]">
           <CalendarHeader>
