@@ -15,6 +15,8 @@ const Calendar = ({ eventosProp }) => {
   const [currentEvents, setCurrentEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [eventosFiltrados, setEventosFiltrados] = useState([]);
+  const [years, setYears] = useState([]);
+
   const compararFechas = (a, b) => {
     // Convertir las fechas al formato 'yyyy/mm/dd' para compararlas
 
@@ -37,10 +39,23 @@ const Calendar = ({ eventosProp }) => {
     year: 'numeric'
   });
 
+  function getYears(array) {
+    return array.reduce((acc, e) => {
+      const fecha = parseInt(e.fecha.substring(e.fecha.length - 4))
+
+      if (!acc.includes(fecha)) {
+        return [...acc, fecha]
+      }
+      return acc
+    }, [])
+  }
+
   useEffect(() => {
     //setear los eventos ordenados por fechas
     // al renderizar el componente
     const eventosOrdenados = eventosProp.sort(compararFechas).map((e, i) => ({ ...e, i: i }));
+
+    setYears(getYears(eventosOrdenados));
 
     setEventos(eventosOrdenados);
     setEventosFiltrados(eventosOrdenados);
@@ -52,16 +67,7 @@ const Calendar = ({ eventosProp }) => {
     }).filter((e) => e !== undefined));
   }, []);
 
-  function getYears(array) {
-    return array.reduce((acc, e) => {
-      const fecha = parseInt(e.fecha.substring(e.fecha.length - 2))
-
-      if (!acc.includes(fecha)) {
-        return [...acc, fecha]
-      }
-      return acc
-    }, [])
-  }
+  
 
   return (
     <div className="bg-white h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
@@ -74,7 +80,7 @@ const Calendar = ({ eventosProp }) => {
         </div>
 
         <div className="w flex flex-col md:flex-row md:justify-evenly items-center">
-          <Dates eventos={eventosFiltrados} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
+          <Dates years={years} eventos={eventosFiltrados} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
           <Eventos selectedDate={selectedDate} formatedDate={formatedDate} eventos={eventos} currentEvents={currentEvents} />
         </div>
       </div>

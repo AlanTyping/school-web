@@ -1,4 +1,4 @@
-import { isSameMonth, format, isSameDay, getMonth} from 'date-fns'
+import { isSameMonth, format, isSameDay, getMonth } from 'date-fns'
 import { figtree } from '../../../fonts/fonts';
 export default function Day({ day, monthStart, todaysDate, eventos, selectedDate, setSelectedDate }) {
   const fechaFormateada = day.toLocaleDateString('es-ES', {
@@ -8,13 +8,12 @@ export default function Day({ day, monthStart, todaysDate, eventos, selectedDate
   });
 
   const bg = eventos.filter((e) => e.fecha === fechaFormateada);
-  
+
   let diaSinClases = [];
 
   if (bg.length >= 1) {
     diaSinClases = bg.filter(e => e.categoria === 'díasinclases')
   }
-  
 
   return (
     <div

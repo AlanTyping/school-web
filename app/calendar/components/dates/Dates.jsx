@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Day from "../day/Day";
-import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, addMonths, isSameYear } from 'date-fns';
+import Years from "./years/Years";
+import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, addMonths, isSameYear, setYear } from 'date-fns';
 import { poppinsBold, figtreeBold } from '../../../fonts/fonts'
 import '../../calendar.css'
 
-export default function Dates({ eventos, selectedDate, setSelectedDate, setFormatedDate, setCurrentEvents}) {
+export default function Dates({ years, eventos, selectedDate, setSelectedDate, setFormatedDate, setCurrentEvents }) {
   const [todaysDate, setTodaysDate] = useState(new Date());
   const [currentDate, setCurrentDate] = useState(new Date());
+  const [showYears, setShowYears] = useState(false);
 
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(monthStart);
@@ -53,13 +55,22 @@ export default function Dates({ eventos, selectedDate, setSelectedDate, setForma
     setCurrentDate(prev => addMonths(prev, 1));
   };
 
+  const setSelectedYear = (año) => {
+    setCurrentDate(setYear(currentDate, año));
+  };
+
   return (
     <div className="calendar m-2">
-      <div className="header">
-        <button onClick={prevMonth}>{'<'}</button>
-        <h2 className={`${poppinsBold.className} text-[1.1rem]`}>{format(monthStart, 'MMMM yyyy')}</h2>
-        <button onClick={nextMonth}>{'>'}</button>
+      <div className="header relative">
+        <button onClick={prevMonth} className="text-[1.1rem]">{'<'}</button>
+        <h2 onClick={() => setShowYears(!showYears)} className={`${poppinsBold.className} cursor-pointer text-[1.1rem]`}>{format(monthStart, 'MMMM yyyy')}</h2>
+        <button onClick={nextMonth} className="text-[1.1rem]">{'>'}</button>
       </div>
+      {showYears &&
+        <div className="relative w">
+          <Years years={years} setSelectedYear={setSelectedYear} />
+        </div>
+      }
       <div className="days">
         <div className="row">
           {['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'].map(day => (
