@@ -67,7 +67,7 @@ export default function Dates({ years, eventos, selectedDate, setSelectedDate, s
         <button onClick={nextMonth} className="text-[1.1rem]">{'>'}</button>
       </div>
       {showYears &&
-        <div className="relative w">
+        <div onClick={() => setShowYears(!showYears)} className="relative w">
           <Years years={years} setSelectedYear={setSelectedYear} />
         </div>
       }
