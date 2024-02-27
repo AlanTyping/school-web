@@ -15,8 +15,6 @@ const Calendar = ({ eventosProp }) => {
   const [currentEvents, setCurrentEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [eventosFiltrados, setEventosFiltrados] = useState([]);
-  const [fullEventos, setFullEventos] = useState([]);
-
   const compararFechas = (a, b) => {
     // Convertir las fechas al formato 'yyyy/mm/dd' para compararlas
 
@@ -42,17 +40,16 @@ const Calendar = ({ eventosProp }) => {
   useEffect(() => {
     //setear los eventos ordenados por fechas
     // al renderizar el componente
-    const eventosOrdenados = eventosProp.sort(compararFechas);
-    setFullEventos(eventosOrdenados.filter(e => e.titulo !== ''));
+    const eventosOrdenados = eventosProp.sort(compararFechas).map((e, i) => ({ ...e, i: i }));
+
     setEventos(eventosOrdenados);
     setEventosFiltrados(eventosOrdenados);
 
     //setear si hay, las eventos que coincidan
     //con la fecha seleccionada
-    setCurrentEvents(eventosOrdenados.filter(e => e.titulo !== '').map((e, i) => {
-      if (e.fecha === fechaFormateada) return { ...e, i: i }
-      else return undefined;
-    }).filter((element) => element !== undefined));
+    setCurrentEvents(eventosOrdenados.map(e => {
+      if (e.fecha === fechaFormateada) return e
+    }).filter((e) => e !== undefined));
   }, []);
 
   function getYears(array) {
@@ -68,9 +65,8 @@ const Calendar = ({ eventosProp }) => {
 
 
   return (
-    <div className="bg-white h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
-      
-    
+    <div className="bg-[#ccc] h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
+
       <div className="w-[90%] md:w-[90%] md:items-center flex flex-col mt-6">
         <div className="w md:w-[85%]">
           <CalendarHeader>
@@ -78,12 +74,12 @@ const Calendar = ({ eventosProp }) => {
           </CalendarHeader>
         </div>
 
-
         <div className="w flex flex-col md:flex-row md:justify-evenly items-center">
           <Dates eventos={eventosFiltrados} selectedDate={selectedDate} setSelectedDate={setSelectedDate} setFormatedDate={setFormatedDate} setCurrentEvents={setCurrentEvents} />
-          <Eventos selectedDate={selectedDate} formatedDate={formatedDate} eventos={fullEventos} currentEvents={currentEvents} />
+          <Eventos selectedDate={selectedDate} formatedDate={formatedDate} eventos={eventos} currentEvents={currentEvents} />
         </div>
       </div>
+
     </div>
   );
 };

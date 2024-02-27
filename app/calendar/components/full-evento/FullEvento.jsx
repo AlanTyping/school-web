@@ -33,7 +33,7 @@ export default function FullEvento({ eventos, closeDialog, i }) {
     //   setLeftDisable(false)
     // }
 
-  }, [currentIndex])
+  }, [])
 
   // const sumIndex = () => {
   //   setCurrentIndex((i) => i + 1)
@@ -71,8 +71,8 @@ export default function FullEvento({ eventos, closeDialog, i }) {
               </div>
 
               {imagen &&
-                <div className="relative h-[160px] sm:h-[180px] w-full mt-3">
-                  <Image onClick={() => setBigImage(true)} className={`rounded`} style={{ objectFit: "contain" }} quality={65} fill={true} sizes='30vw' alt="" src={imagen} />
+                <div className="relative h-[180px] sm:h-[300px] w-full mt-3">
+                  <Image onClick={() => setBigImage(true)} className={`rounded`} style={{ objectFit: "contain" }} quality={90} fill={true} sizes='30vw' alt="" src={imagen} />
                 </div>}
 
               {titulo &&

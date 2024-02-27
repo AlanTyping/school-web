@@ -37,14 +37,13 @@ export default function Dates({ eventos, selectedDate, setSelectedDate, setForma
 
   useEffect(() => {
     if (eventos.length !== 0) {
-      setCurrentEvents(eventos.filter(e => e.titulo !== '').map((e, i) => {
-        if (e.fecha === fechaFormateada) return { ...e, i: i }
-        else return undefined;
+      setCurrentEvents(eventos.filter(e => e.titulo !== '').map((e) => {
+        if (e.fecha === fechaFormateada) return e
       }).filter((element) => element !== undefined));
     }
 
     setFormatedDate(fechaFormateada);
-  }, [selectedDate, eventos]);
+  }, [selectedDate]);
 
   const prevMonth = () => {
     setCurrentDate(prev => addMonths(prev, -1));

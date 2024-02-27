@@ -18,14 +18,16 @@ export default function Eventos({ selectedDate, formatedDate, currentEvents, eve
       </div>
       <div id="event-container" className="w max-h-[200px] mt-6 flex flex-col overflow-y-auto overflow-x-hidden">
         {
-        currentEvents.length === 0 ? 
-        <div className="w flex flex-col items-center justify-center h ">
-          <h3 className={`${figtreeBold.className} text-[1.2rem] text-[var(--bg)]`}>Sin eventos para mostrar</h3>
-           <Image src={calendario} alt='' className={`h-[120px] w-[120px] mt-6`} /> 
-        </div>
-       
-        :
-        currentEvents.map(({ titulo, fecha, descripcion, i, desde, hasta, categoria, lugar }) => <Evento categoria={categoria} i={i} eventos={eventos} descripcion={descripcion} desde={desde} hasta={hasta} lugar={lugar} fecha={fecha} titulo={titulo} key={i} />)}
+          currentEvents.length === 0 ?
+            <div className="w flex items-center justify-center h">
+              <div className="flex-center flex-col">
+                <h3 className={`${figtreeBold.className} text-[1.2rem] text-[var(--bg)]`}>Sin eventos para mostrar</h3>
+                <Image src={calendario} alt='' className={`h-[120px] w-[120px] mt-6`} />
+              </div>
+
+            </div>
+            :
+            currentEvents.map(({ titulo, fecha, descripcion, i, desde, hasta, categoria, lugar }, indice) => <Evento categoria={categoria} i={i} eventos={eventos} descripcion={descripcion} desde={desde} hasta={hasta} lugar={lugar} fecha={fecha} titulo={titulo} key={indice} />)}
       </div>
     </div>
   )
