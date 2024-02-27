@@ -11,13 +11,13 @@ import location from '../assets/location.svg'
 export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, eventos, categoria, lugar }) {
   const [isOpen, setIsOpen] = useState(false);
   const dialogRef = useRef(null);
-  let categoriaColor = '';
+  let categoriaStyle = '';
 
 
   if (categoria) {
     categorias.forEach(c => {
       if (c.categoria.replace(/\s+/g, '') === categoria) {
-        categoriaColor = c.bg;
+        categoriaStyle = c;
         return;
       }
     });
@@ -35,11 +35,11 @@ export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, ev
 
   return (
     <div className="w flex flex-col relative items-start mb-4 pl-4 text-[0.95rem]">
-      <div className={`inset-y-0 absolute left-0 w-[4px] rounded ${categoriaColor && `${categoriaColor}`}`} />
+      <div className={`inset-y-0 absolute left-0 w-[4px] rounded ${categoriaStyle && `${categoriaStyle.bg}`}`} />
       {titulo &&
         <>
           <div className="w flex flex-row">
-            <button onClick={() => openDialog()} className={`font-bold text-[var(--lightContrast)] truncate text-[1rem]`}>{titulo}</button>
+            <button onClick={() => openDialog()} className={`${categoriaStyle ? `${categoriaStyle.texto}` : 'text-[var(--lightContrast)]'} font-bold  truncate text-[1rem]`}>{titulo}</button>
           </div>
         </>
       }

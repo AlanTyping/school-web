@@ -43,7 +43,7 @@ export default function Dates({ eventos, selectedDate, setSelectedDate, setForma
     }
 
     setFormatedDate(fechaFormateada);
-  }, [selectedDate]);
+  }, [selectedDate, eventos]);
 
   const prevMonth = () => {
     setCurrentDate(prev => addMonths(prev, -1));

@@ -63,9 +63,8 @@ const Calendar = ({ eventosProp }) => {
     }, [])
   }
 
-
   return (
-    <div className="bg-[#ccc] h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
+    <div className="bg-white h min-h-[900px] md:min-h-[700px] w flex flex-col items-center">
 
       <div className="w-[90%] md:w-[90%] md:items-center flex flex-col mt-6">
         <div className="w md:w-[85%]">
