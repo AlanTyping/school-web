@@ -35,7 +35,7 @@ export default function Evento({ fecha, titulo, i, desde, hasta, descripcion, ev
 
   return (
     <div className="w flex flex-col relative items-start mb-4 pl-4 text-[0.95rem]">
-      <div className={`inset-y-0 absolute left-0 w-[4px] rounded ${categoriaStyle && `${categoriaStyle.bg}`}`} />
+      <div className={`inset-y-0 absolute left-0 w-[4px] rounded ${categoriaStyle ? `${categoriaStyle.bg}` : 'bg-[var(--lightBorder)]'}`} />
       {titulo &&
         <>
           <div className="w flex flex-row">
