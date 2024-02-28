@@ -1,5 +1,5 @@
 import React from 'react';
-import { figtreeBold } from '@/app/fonts/fonts';
+import { figtree } from '../../../../fonts/fonts';
 
 export default function Years({ years, setSelectedYear }) {
 

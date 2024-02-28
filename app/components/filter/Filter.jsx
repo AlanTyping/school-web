@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { figtreeBold, figtree } from '../../fonts/fonts';
-import categorias from "@/app/calendar/categorias";
+import categorias from "../../calendar/categorias";
 
 export default function Filter({ setFilteredElements, elements, backgroundBg, itemBg }) {
   const [filter, setFilter] = useState(false);

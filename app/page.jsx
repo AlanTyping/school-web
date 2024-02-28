@@ -56,7 +56,7 @@ export default function Home() {
       <Header />
       <SectionsNav />
       <Presentation />
-      <PostsApi />
+      {/* <PostsApi /> */}
       <Course />
       <Identidad />
       {/* <SectionTwo />
